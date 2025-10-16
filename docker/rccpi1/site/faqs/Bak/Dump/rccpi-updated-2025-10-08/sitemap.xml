@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://rccpi.net/</loc><lastmod>2025-09-28</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://rccpi.net/aeo/</loc><lastmod>2025-09-28</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://rccpi.net/aeo/cloud-readiness.html</loc><lastmod>2025-09-28</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://rccpi.net/aeo/aws-architecture-basics.html</loc><lastmod>2025-09-28</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://rccpi.net/aeo/migrate-website-to-aws.html</loc><lastmod>2025-09-28</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://rccpi.net/aeo/aws-costs-and-finops.html</loc><lastmod>2025-09-28</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://rccpi.net/aeo/security-compliance-basics.html</loc><lastmod>2025-09-28</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://rccpi.net/aeo/networking-performance.html</loc><lastmod>2025-09-28</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://rccpi.net/aeo/data-storage-databases.html</loc><lastmod>2025-09-28</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://rccpi.net/aeo/containers-ecs-eks.html</loc><lastmod>2025-09-28</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://rccpi.net/aeo/devops-ci-cd-iac.html</loc><lastmod>2025-09-28</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://rccpi.net/aeo/reliability-backups-dr.html</loc><lastmod>2025-09-28</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://rccpi.net/aeo/web-wordpress-hosting.html</loc><lastmod>2025-09-28</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://rccpi.net/aeo/analytics-ai-observability.html</loc><lastmod>2025-09-28</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://rccpi.net/aeo/governance-iam-accounts.html</loc><lastmod>2025-09-28</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://rccpi.net/aeo/pricing-engagement-slas.html</loc><lastmod>2025-09-28</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://rccpi.net/services.html</loc><lastmod>2025-10-08</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://rccpi.net/pricing.html</loc><lastmod>2025-10-08</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://rccpi.net/email.html</loc><lastmod>2025-10-08</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://rccpi.net/about.html</loc><lastmod>2025-10-08</lastmod><changefreq>yearly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://rccpi.net/contact.html</loc><lastmod>2025-10-08</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+</urlset>

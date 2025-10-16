@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Governance, IAM & Account Setup | rccpi.net</title>
+  <meta name="description" content="Keep people productive and data safe with clean boundaries.">
+  <link rel="canonical" href="https://rccpi.net/governance-iam-accounts.html">
+  <style>
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu, Cantarell, 'Helvetica Neue', Arial, sans-serif;line-height:1.6;padding:2rem;max-width:880px;margin:auto}
+    h1{font-size:1.8rem;margin-bottom:0.5rem}
+    h2{margin-top:2rem}
+    .answer{background:#f6f8fa;padding:0.8rem 1rem;border-radius:12px}
+    code,pre{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,'Liberation Mono','Courier New',monospace}
+    .meta{color:#666;font-size:0.9rem;margin-bottom:1rem}
+    .toc ul{list-style: none; padding-left: 0}
+    .toc a{text-decoration:none}
+  </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Governance, IAM & Account Setup",
+  "about": "Single vs multi\u2011account setup",
+  "author": {
+    "@type": "Person",
+    "name": "Rosario Roussin"
+  },
+  "dateModified": "2025-09-28",
+  "description": "Keep people productive and data safe with clean boundaries.",
+  "hasPart": [
+    {
+      "@type": "HowTo",
+      "name": "Single vs multi\u2011account setup",
+      "description": "Use one account for very small teams; move to multi\u2011account for production isolation, billing clarity, and stronger guardrails. Start with a management account and separate prod from non\u2011prod when you hit multiple apps or clients.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "name": "Start in one account with orgs enabled.",
+          "text": "Start in one account with orgs enabled."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Split prod/non\u2011prod as complexity grows.",
+          "text": "Split prod/non\u2011prod as complexity grows."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Apply SCPs and guardrails centrally.",
+          "text": "Apply SCPs and guardrails centrally."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Standardize tagging across accounts.",
+          "text": "Standardize tagging across accounts."
+        }
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "name": "Onboard/offboard safely",
+      "description": "Use SSO with short\u2011lived roles. Grant access by job function, not person. For departures, revoke SSO access, rotate shared secrets, and verify no lingering keys exist. Keep a checklist and an owner for each step.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "name": "Provision via SSO; assign roles by function.",
+          "text": "Provision via SSO; assign roles by function."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Use groups; avoid individual policies.",
+          "text": "Use groups; avoid individual policies."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Automate offboarding; rotate credentials.",
+          "text": "Automate offboarding; rotate credentials."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Audit quarterly for dormant access.",
+          "text": "Audit quarterly for dormant access."
+        }
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "name": "A tagging strategy that pays off",
+      "description": "Tag everything for owner, environment, app, and cost center. Enforce tags in CI and report spend by tag. This makes cost reviews, cleanup, and compliance dramatically simpler.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "name": "Define required tags",
+          "text": "Define required tags: Owner, Env, App, CostCenter."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Validate tags in CI and at deploy time.",
+          "text": "Validate tags in CI and at deploy time."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Generate monthly cost by tag reports.",
+          "text": "Generate monthly cost by tag reports."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Clean untagged resources on a schedule.",
+          "text": "Clean untagged resources on a schedule."
+        }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+<header>
+  <h1>Governance, IAM & Account Setup</h1>
+  <p class="meta">Author: Rosario Roussin · Last updated: 2025-09-28</p>
+</header>
+<section class="toc">
+  <h2>On this page</h2>
+  <ul>
+    <li><a href="#accounts">Single vs multi‑account setup</a></li>    <li><a href="#onboarding">Onboard/offboard safely</a></li>    <li><a href="#tagging">A tagging strategy that pays off</a></li>  </ul>
+</section>
+<section id="accounts">
+  <h2>Single vs multi‑account setup</h2>
+  <p class="answer">Use one account for very small teams; move to multi‑account for production isolation, billing clarity, and stronger guardrails. Start with a management account and separate prod from non‑prod when you hit multiple apps or clients.</p>
+  <h3>Steps</h3>
+  <ol>
+    <li>Start in one account with orgs enabled.</li>
+    <li>Split prod/non‑prod as complexity grows.</li>
+    <li>Apply SCPs and guardrails centrally.</li>
+    <li>Standardize tagging across accounts.</li>
+  </ol>
+</section>
+<section id="onboarding">
+  <h2>Onboard/offboard safely</h2>
+  <p class="answer">Use SSO with short‑lived roles. Grant access by job function, not person. For departures, revoke SSO access, rotate shared secrets, and verify no lingering keys exist. Keep a checklist and an owner for each step.</p>
+  <h3>Steps</h3>
+  <ol>
+    <li>Provision via SSO; assign roles by function.</li>
+    <li>Use groups; avoid individual policies.</li>
+    <li>Automate offboarding; rotate credentials.</li>
+    <li>Audit quarterly for dormant access.</li>
+  </ol>
+</section>
+<section id="tagging">
+  <h2>A tagging strategy that pays off</h2>
+  <p class="answer">Tag everything for owner, environment, app, and cost center. Enforce tags in CI and report spend by tag. This makes cost reviews, cleanup, and compliance dramatically simpler.</p>
+  <h3>Steps</h3>
+  <ol>
+    <li>Define required tags: Owner, Env, App, CostCenter.</li>
+    <li>Validate tags in CI and at deploy time.</li>
+    <li>Generate monthly cost by tag reports.</li>
+    <li>Clean untagged resources on a schedule.</li>
+  </ol>
+</section>
+</body>
+</html>

@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Analytics, AI & Observability for Small Teams | rccpi.net</title>
+  <meta name="description" content="See what matters—traffic, conversions, reliability, and cost.">
+  <link rel="canonical" href="https://rccpi.net/analytics-ai-observability.html">
+  <link rel="stylesheet" href="/style.css">
+  <!--<style>
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu, Cantarell, 'Helvetica Neue', Arial, sans-serif;line-height:1.6;padding:2rem;max-width:880px;margin:auto}
+    h1{font-size:1.8rem;margin-bottom:0.5rem}
+    h2{margin-top:2rem}
+    .answer{background:#f6f8fa;padding:0.8rem 1rem;border-radius:12px}
+    code,pre{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,'Liberation Mono','Courier New',monospace}
+    .meta{color:#666;font-size:0.9rem;margin-bottom:1rem}
+    .toc ul{list-style: none; padding-left: 0}
+    .toc a{text-decoration:none}
+  </style> -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Analytics, AI & Observability for Small Teams",
+  "about": "Minimal analytics without tracking drama",
+  "author": {
+    "@type": "Person",
+    "name": "Rosario Roussin"
+  },
+  "dateModified": "2025-09-28",
+  "description": "See what matters\u2014traffic, conversions, reliability, and cost.",
+  "hasPart": [
+    {
+      "@type": "HowTo",
+      "name": "Minimal analytics without tracking drama",
+      "description": "Use a privacy\u2011respecting analytics tool for page views and conversions, and tie key events to business outcomes. Avoid over\u2011collecting data; leaders want trends and actions, not noise. Keep a simple weekly dashboard everyone can read.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "name": "Define the 3\u20135 metrics that matter.",
+          "text": "Define the 3\u20135 metrics that matter."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Instrument events tied to outcomes.",
+          "text": "Instrument events tied to outcomes."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Publish a weekly dashboard for stakeholders.",
+          "text": "Publish a weekly dashboard for stakeholders."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Review trends; pick one action per week.",
+          "text": "Review trends; pick one action per week."
+        }
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "name": "Use AI to summarize logs and alerts",
+      "description": "Route logs to a central store and summarize errors daily. Use anomaly detection to surface unusual spikes. Keep human\u2011readable runbooks so on\u2011call can act quickly when AI flags an incident.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "name": "Centralize logs and metrics.",
+          "text": "Centralize logs and metrics."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Enable anomaly detection and summary jobs.",
+          "text": "Enable anomaly detection and summary jobs."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Link alerts to runbooks with owners.",
+          "text": "Link alerts to runbooks with owners."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Review false positives and tune rules monthly.",
+          "text": "Review false positives and tune rules monthly."
+        }
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "name": "Dashboards leadership actually reads",
+      "description": "Show uptime, latency, top errors, conversion rate, and monthly cloud spend on one page. Add a short narrative and one decision request. Update weekly and archive to track progress over time.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "name": "Pick 5 tiles max",
+          "text": "Pick 5 tiles max: A, L, E, CR, Cost."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Write a 3\u20134 sentence summary.",
+          "text": "Write a 3\u20134 sentence summary."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Propose one decision or tradeoff.",
+          "text": "Propose one decision or tradeoff."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Archive snapshots to show trends.",
+          "text": "Archive snapshots to show trends."
+        }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+<header>
+  <h1>Analytics, AI & Observability for Small Teams</h1>
+  <p class="meta">Author: Rosario Roussin · Last updated: 2025-09-28</p>
+</header>
+<section class="toc">
+  <h2>On this page</h2>
+  <ul>
+    <li><a href="#minimal-analytics">Minimal analytics without tracking drama</a></li>    <li><a href="#ai-ops">Use AI to summarize logs and alerts</a></li>    <li><a href="#dashboards">Dashboards leadership actually reads</a></li>  </ul>
+</section>
+<section id="minimal-analytics">
+  <h2>Minimal analytics without tracking drama</h2>
+  <p class="answer">Use a privacy‑respecting analytics tool for page views and conversions, and tie key events to business outcomes. Avoid over‑collecting data; leaders want trends and actions, not noise. Keep a simple weekly dashboard everyone can read.</p>
+  <h3>Steps</h3>
+  <ol>
+    <li>Define the 3–5 metrics that matter.</li>
+    <li>Instrument events tied to outcomes.</li>
+    <li>Publish a weekly dashboard for stakeholders.</li>
+    <li>Review trends; pick one action per week.</li>
+  </ol>
+</section>
+<section id="ai-ops">
+  <h2>Use AI to summarize logs and alerts</h2>
+  <p class="answer">Route logs to a central store and summarize errors daily. Use anomaly detection to surface unusual spikes. Keep human‑readable runbooks so on‑call can act quickly when AI flags an incident.</p>
+  <h3>Steps</h3>
+  <ol>
+    <li>Centralize logs and metrics.</li>
+    <li>Enable anomaly detection and summary jobs.</li>
+    <li>Link alerts to runbooks with owners.</li>
+    <li>Review false positives and tune rules monthly.</li>
+  </ol>
+</section>
+<section id="dashboards">
+  <h2>Dashboards leadership actually reads</h2>
+  <p class="answer">Show uptime, latency, top errors, conversion rate, and monthly cloud spend on one page. Add a short narrative and one decision request. Update weekly and archive to track progress over time.</p>
+  <h3>Steps</h3>
+  <ol>
+    <li>Pick 5 tiles max: A, L, E, CR, Cost.</li>
+    <li>Write a 3–4 sentence summary.</li>
+    <li>Propose one decision or tradeoff.</li>
+    <li>Archive snapshots to show trends.</li>
+  </ol>
+</section>
+</body>
+</html>

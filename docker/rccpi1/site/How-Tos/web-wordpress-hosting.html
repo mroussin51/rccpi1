@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Web & WordPress Hosting on AWS | rccpi.net</title>
+  <meta name="description" content="Fast, secure hosting patterns for static sites and WordPress.">
+  <link rel="canonical" href="https://rccpi.net/web-wordpress-hosting.html">
+  <style>
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu, Cantarell, 'Helvetica Neue', Arial, sans-serif;line-height:1.6;padding:2rem;max-width:880px;margin:auto}
+    h1{font-size:1.8rem;margin-bottom:0.5rem}
+    h2{margin-top:2rem}
+    .answer{background:#f6f8fa;padding:0.8rem 1rem;border-radius:12px}
+    code,pre{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,'Liberation Mono','Courier New',monospace}
+    .meta{color:#666;font-size:0.9rem;margin-bottom:1rem}
+    .toc ul{list-style: none; padding-left: 0}
+    .toc a{text-decoration:none}
+  </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Web & WordPress Hosting on AWS",
+  "about": "Fast static site with HTTPS and CDN",
+  "author": {
+    "@type": "Person",
+    "name": "Rosario Roussin"
+  },
+  "dateModified": "2025-09-28",
+  "description": "Fast, secure hosting patterns for static sites and WordPress.",
+  "hasPart": [
+    {
+      "@type": "HowTo",
+      "name": "Fast static site with HTTPS and CDN",
+      "description": "Host on S3, front with CloudFront, and use ACM for TLS. Cache HTML carefully, compress assets, and version file names to bust caches on deploy. Add a simple CI job to invalidate changed paths only.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "name": "Upload site to S3 with proper MIME types.",
+          "text": "Upload site to S3 with proper MIME types."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Attach CloudFront; configure caching policies.",
+          "text": "Attach CloudFront; configure caching policies."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Issue ACM cert; set HTTPS redirects.",
+          "text": "Issue ACM cert; set HTTPS redirects."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Automate cache invalidations on deploy.",
+          "text": "Automate cache invalidations on deploy."
+        }
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "name": "Secure WordPress without the headache",
+      "description": "Use a managed database, restrict admin access, keep plugins to essentials, and place the site behind a CDN and WAF. Keep automatic updates and daily offsite backups. Monitor login attempts and errors to catch issues early.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "name": "Use RDS and least\u2011privilege credentials.",
+          "text": "Use RDS and least\u2011privilege credentials."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Place behind CloudFront and managed WAF.",
+          "text": "Place behind CloudFront and managed WAF."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Limit plugins; auto\u2011update core and themes.",
+          "text": "Limit plugins; auto\u2011update core and themes."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Daily backups; test restores quarterly.",
+          "text": "Daily backups; test restores quarterly."
+        }
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "name": "Add a staging environment safely",
+      "description": "Clone the site and database, disable indexing, and protect with basic auth. Route a subdomain to staging and require approvals before promoting changes. Reset data regularly to avoid drift.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "name": "Clone prod; sanitize sensitive data.",
+          "text": "Clone prod; sanitize sensitive data."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Block search indexing; add auth.",
+          "text": "Block search indexing; add auth."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Route staging subdomain; restrict access.",
+          "text": "Route staging subdomain; restrict access."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Approve and promote changes via CI/CD.",
+          "text": "Approve and promote changes via CI/CD."
+        }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+<header>
+  <h1>Web & WordPress Hosting on AWS</h1>
+  <p class="meta">Author: Rosario Roussin · Last updated: 2025-09-28</p>
+</header>
+<section class="toc">
+  <h2>On this page</h2>
+  <ul>
+    <li><a href="#static-fast">Fast static site with HTTPS and CDN</a></li>    <li><a href="#wp-secure">Secure WordPress without the headache</a></li>    <li><a href="#staging">Add a staging environment safely</a></li>  </ul>
+</section>
+<section id="static-fast">
+  <h2>Fast static site with HTTPS and CDN</h2>
+  <p class="answer">Host on S3, front with CloudFront, and use ACM for TLS. Cache HTML carefully, compress assets, and version file names to bust caches on deploy. Add a simple CI job to invalidate changed paths only.</p>
+  <h3>Steps</h3>
+  <ol>
+    <li>Upload site to S3 with proper MIME types.</li>
+    <li>Attach CloudFront; configure caching policies.</li>
+    <li>Issue ACM cert; set HTTPS redirects.</li>
+    <li>Automate cache invalidations on deploy.</li>
+  </ol>
+</section>
+<section id="wp-secure">
+  <h2>Secure WordPress without the headache</h2>
+  <p class="answer">Use a managed database, restrict admin access, keep plugins to essentials, and place the site behind a CDN and WAF. Keep automatic updates and daily offsite backups. Monitor login attempts and errors to catch issues early.</p>
+  <h3>Steps</h3>
+  <ol>
+    <li>Use RDS and least‑privilege credentials.</li>
+    <li>Place behind CloudFront and managed WAF.</li>
+    <li>Limit plugins; auto‑update core and themes.</li>
+    <li>Daily backups; test restores quarterly.</li>
+  </ol>
+</section>
+<section id="staging">
+  <h2>Add a staging environment safely</h2>
+  <p class="answer">Clone the site and database, disable indexing, and protect with basic auth. Route a subdomain to staging and require approvals before promoting changes. Reset data regularly to avoid drift.</p>
+  <h3>Steps</h3>
+  <ol>
+    <li>Clone prod; sanitize sensitive data.</li>
+    <li>Block search indexing; add auth.</li>
+    <li>Route staging subdomain; restrict access.</li>
+    <li>Approve and promote changes via CI/CD.</li>
+  </ol>
+</section>
+</body>
+</html>

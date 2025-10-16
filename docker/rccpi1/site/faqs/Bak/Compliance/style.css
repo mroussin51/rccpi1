@@ -1,0 +1,154 @@
+:root {
+  --bg: #0b1020;
+  --card: #11162a;
+  --text: #f2f4f8;
+  --muted: #c0c6d4;
+  --accent: #5dd6ff;
+  --accent-2: #7df3c0;
+  --line: #1c2340;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.container { width: min(1100px, 92%); margin: 0 auto; }
+
+.site-header {
+  border-bottom: 1px solid var(--line);
+  position: sticky; top: 0; backdrop-filter: blur(6px);
+  background: rgba(11,16,32,0.85); z-index: 10;
+}
+.header-inner { display: flex; align-items: center; justify-content: space-between; padding: 14px 0; }
+.logo { font-weight: 800; letter-spacing: 0.5px; color: var(--text); }
+.nav a { margin-left: 18px; }
+.nav .cta { margin-left: 24px; }
+
+.site-main { padding-bottom: 60px; }
+
+.hero { padding: 64px 0 24px; }
+.hero-inner { display: grid; gap: 28px; grid-template-columns: 1.2fr 1fr; align-items: center; }
+.hero h1 { font-size: 40px; line-height: 1.15; margin: 0 0 10px; }
+.subhead { color: var(--muted); font-size: 18px; }
+.hero-ctas { margin: 18px 0; display: flex; gap: 12px; flex-wrap: wrap; }
+.trust-line { color: var(--muted); font-size: 14px; }
+.hero-art .placeholder { height: 220px; border: 1px dashed var(--line); border-radius: 14px; display:flex; align-items:center; justify-content:center; color: var(--muted); }
+
+.page-hero { padding: 40px 0 10px; border-bottom: 1px solid var(--line); }
+.page-hero.narrow { padding: 36px 0; }
+
+.cards { display: grid; gap: 16px; grid-template-columns: repeat(3, 1fr); }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 18px; }
+.card h3 { margin-top: 0; }
+
+.grid-2 { display: grid; gap: 24px; grid-template-columns: repeat(2, 1fr); }
+
+.checklist li::marker { content: "✔ "; color: var(--accent-2); }
+.bullets { padding-left: 18px; }
+.bullets.two-col { columns: 2; column-gap: 24px; }
+.steps { padding-left: 18px; }
+.steps li::marker { content: "➜ "; color: var(--accent); }
+
+.cta-band { padding: 28px 0; }
+.band-inner { background: linear-gradient(90deg, rgba(93,214,255,0.18), rgba(125,243,192,0.18)); border:1px solid var(--line); border-radius:16px; padding: 24px; text-align:center; }
+.band-inner h2 { margin: 8px 0; }
+
+.service-list { display: grid; gap: 22px; grid-template-columns: 1fr; padding: 24px 0; }
+.service { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 18px; }
+
+.two-col { display: grid; gap: 24px; grid-template-columns: repeat(2, 1fr); }
+
+.center { text-align: center; margin: 12px 0 20px; }
+
+.btn { display: inline-block; border: 1px solid var(--accent); padding: 10px 16px; border-radius: 10px; font-weight: 600; }
+.btn:hover { text-decoration: none; filter: brightness(1.05); }
+.btn.ghost { border-color: var(--line); color: var(--text); }
+.btn.cta { background: var(--accent); color: #081021; border-color: var(--accent); }
+.btn.cta:hover { filter: brightness(1.08); }
+
+.pricing-grid { display: grid; gap: 16px; grid-template-columns: repeat(3, 1fr); padding: 24px 0; }
+.price-card { background: var(--card); border:1px solid var(--line); border-radius: 14px; padding: 18px; position: relative; }
+.price-card .price { font-size: 32px; font-weight: 800; margin: 6px 0 8px; }
+.price-card .price span { font-size: 16px; color: var(--muted); font-weight: 500; }
+.price-card .included { padding-left: 18px; margin: 10px 0 18px; }
+.price-card.featured { outline: 2px solid var(--accent); }
+.price-card .badge { position: absolute; top: -10px; right: 14px; background: var(--accent); color: #081021; padding: 4px 8px; border-radius: 8px; font-size: 12px; font-weight: 700; }
+
+.faq details { background: var(--card); border:1px solid var(--line); border-radius: 12px; padding: 12px 14px; margin: 10px 0; }
+.faq summary { cursor: pointer; font-weight: 700; }
+
+.contact-grid { display: grid; gap: 24px; grid-template-columns: 1.2fr 1fr; padding: 24px 0; }
+.contact-form { background: var(--card); border:1px solid var(--line); border-radius: 14px; padding: 18px; }
+.field { margin-bottom: 14px; }
+.field.two { display: grid; gap: 14px; grid-template-columns: 1fr 1fr; }
+label { display: block; font-weight: 700; margin-bottom: 6px; }
+input, select, textarea { width: 100%; padding: 10px 12px; border-radius: 10px; border: 1px solid var(--line); background: #0e152b; color: var(--text); }
+.actions { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+.form-note { color: var(--muted); font-size: 14px; }
+
+.site-footer { border-top: 1px solid var(--line); padding: 24px 0; }
+.footer-grid { display: grid; gap: 16px; grid-template-columns: 1fr 1fr 1fr; align-items: start; }
+.footer-nav a { display: block; margin: 4px 0; color: var(--muted); }
+.footer-nav a:hover { color: var(--text); }
+.foot-legal { color: var(--muted); font-size: 14px; }
+
+@media (max-width: 900px) {
+  .hero-inner, .grid-2, .two-col, .contact-grid, .pricing-grid, .cards { grid-template-columns: 1fr; }
+  .bullets.two-col { columns: 1; }
+}
+/* Responsive hero image */
+.hero-art img {
+  display: block;
+  width: 100%;
+  /* Scales between 140px and 220px tall based on viewport width */
+  height: clamp(140px, 32vw, 220px);
+  object-fit: cover;
+  border-radius: 14px;
+  border: 1px solid var(--line);
+  background: #0e152b;
+}
+
+/* Tighten hero spacing and font sizes on narrow screens */
+@media (max-width: 600px) {
+  .hero { padding: 40px 0 16px; }
+  .hero h1 { font-size: 32px; }
+  .subhead { font-size: 16px; }
+  /* Make the image a bit shorter on very small phones */
+  .hero-art img { height: clamp(120px, 28vw, 180px); border-radius: 12px; }
+}
+/* Responsive hero image */
+.hero-art img {
+  display: block;
+  width: 100%;
+  height: clamp(140px, 32vw, 220px); /* short on phones, max ~220px on wide screens */
+  object-fit: cover;                 /* fill the box without distortion */
+  border-radius: 14px;
+  border: 1px solid var(--line);
+  background: #0e152b;
+}
+
+@media (max-width: 600px) {
+  .hero-art img { height: clamp(120px, 28vw, 180px); }
+}
+/* STOP CROPPING: show the whole image */
+.hero-art img {
+  display: block;
+  width: 100%;
+  height: auto;              /* key: no fixed height */
+  object-fit: contain;       /* keep whole image inside the box */
+  border-radius: 14px;
+  border: 1px solid var(--line);
+  background: #0e152b;       /* fills letterbox space if any */
+}
+
+/* If you previously set a clamp height, neutralize it */
+.hero-art img { height: auto !important; }
+

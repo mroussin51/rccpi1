@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Networking & Performance: Fast, Secure, and Simple | rccpi.net</title>
+  <meta name="description" content="Speed up your site and set up resilient networking.">
+  <link rel="canonical" href="https://rccpi.net/networking-performance.html">
+  <style>
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu, Cantarell, 'Helvetica Neue', Arial, sans-serif;line-height:1.6;padding:2rem;max-width:880px;margin:auto}
+    h1{font-size:1.8rem;margin-bottom:0.5rem}
+    h2{margin-top:2rem}
+    .answer{background:#f6f8fa;padding:0.8rem 1rem;border-radius:12px}
+    code,pre{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,'Liberation Mono','Courier New',monospace}
+    .meta{color:#666;font-size:0.9rem;margin-bottom:1rem}
+    .toc ul{list-style: none; padding-left: 0}
+    .toc a{text-decoration:none}
+  </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Networking & Performance: Fast, Secure, and Simple",
+  "about": "Make your site fast worldwide",
+  "author": {
+    "@type": "Person",
+    "name": "Rosario Roussin"
+  },
+  "dateModified": "2025-09-28",
+  "description": "Speed up your site and set up resilient networking.",
+  "hasPart": [
+    {
+      "@type": "HowTo",
+      "name": "Make your site fast worldwide",
+      "description": "Serve static assets from S3 and cache with CloudFront. Compress images, enable HTTP/2, and cache HTML where possible. Measure with synthetic tests across regions and fix slow TTFB by moving compute closer or optimizing origin performance.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "name": "Enable CDN with sensible TTLs and cache keys.",
+          "text": "Enable CDN with sensible TTLs and cache keys."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Optimize images; lazy\u2011load below\u2011the\u2011fold assets.",
+          "text": "Optimize images; lazy\u2011load below\u2011the\u2011fold assets."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Compress responses; enable HTTP/2.",
+          "text": "Compress responses; enable HTTP/2."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Track TTFB and cache hit ratio routinely.",
+          "text": "Track TTFB and cache hit ratio routinely."
+        }
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "name": "Set up HTTPS with automatic renewals",
+      "description": "Use managed certificates (ACM) on ALB/CloudFront and redirect all HTTP to HTTPS. If terminating at the origin, automate renewals and reloads. Monitor cert expiry and include it in your standard operations checklist to avoid outages.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "name": "Issue ACM certs; validate domain ownership.",
+          "text": "Issue ACM certs; validate domain ownership."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Attach certs to ALB/CloudFront; force HTTPS.",
+          "text": "Attach certs to ALB/CloudFront; force HTTPS."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "If origin TLS",
+          "text": "If origin TLS: automate renewals and reloads."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Monitor expiry dates and alerts.",
+          "text": "Monitor expiry dates and alerts."
+        }
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "name": "Protect against common attacks on a budget",
+      "description": "Enable basic DDoS protections and a minimal WAF rule set for bots and known bad patterns. Rate\u2011limit login endpoints, prefer OAuth/SSO, and keep origin IPs private behind load balancers to reduce exposure.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "name": "Place site behind ALB/CloudFront.",
+          "text": "Place site behind ALB/CloudFront."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Enable managed WAF rules minimally.",
+          "text": "Enable managed WAF rules minimally."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Rate\u2011limit or captcha login endpoints.",
+          "text": "Rate\u2011limit or captcha login endpoints."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Hide origin IPs; restrict security groups.",
+          "text": "Hide origin IPs; restrict security groups."
+        }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+<header>
+  <h1>Networking & Performance: Fast, Secure, and Simple</h1>
+  <p class="meta">Author: Rosario Roussin · Last updated: 2025-09-28</p>
+</header>
+<section class="toc">
+  <h2>On this page</h2>
+  <ul>
+    <li><a href="#global-speed">Make your site fast worldwide</a></li>    <li><a href="#https-renewals">Set up HTTPS with automatic renewals</a></li>    <li><a href="#ddos-waf">Protect against common attacks on a budget</a></li>  </ul>
+</section>
+<section id="global-speed">
+  <h2>Make your site fast worldwide</h2>
+  <p class="answer">Serve static assets from S3 and cache with CloudFront. Compress images, enable HTTP/2, and cache HTML where possible. Measure with synthetic tests across regions and fix slow TTFB by moving compute closer or optimizing origin performance.</p>
+  <h3>Steps</h3>
+  <ol>
+    <li>Enable CDN with sensible TTLs and cache keys.</li>
+    <li>Optimize images; lazy‑load below‑the‑fold assets.</li>
+    <li>Compress responses; enable HTTP/2.</li>
+    <li>Track TTFB and cache hit ratio routinely.</li>
+  </ol>
+  <h3>Key figures</h3>
+  <ul>
+    <li>TTFB target: < 800 ms globally.</li>
+  </ul>
+</section>
+<section id="https-renewals">
+  <h2>Set up HTTPS with automatic renewals</h2>
+  <p class="answer">Use managed certificates (ACM) on ALB/CloudFront and redirect all HTTP to HTTPS. If terminating at the origin, automate renewals and reloads. Monitor cert expiry and include it in your standard operations checklist to avoid outages.</p>
+  <h3>Steps</h3>
+  <ol>
+    <li>Issue ACM certs; validate domain ownership.</li>
+    <li>Attach certs to ALB/CloudFront; force HTTPS.</li>
+    <li>If origin TLS: automate renewals and reloads.</li>
+    <li>Monitor expiry dates and alerts.</li>
+  </ol>
+</section>
+<section id="ddos-waf">
+  <h2>Protect against common attacks on a budget</h2>
+  <p class="answer">Enable basic DDoS protections and a minimal WAF rule set for bots and known bad patterns. Rate‑limit login endpoints, prefer OAuth/SSO, and keep origin IPs private behind load balancers to reduce exposure.</p>
+  <h3>Steps</h3>
+  <ol>
+    <li>Place site behind ALB/CloudFront.</li>
+    <li>Enable managed WAF rules minimally.</li>
+    <li>Rate‑limit or captcha login endpoints.</li>
+    <li>Hide origin IPs; restrict security groups.</li>
+  </ol>
+</section>
+</body>
+</html>
