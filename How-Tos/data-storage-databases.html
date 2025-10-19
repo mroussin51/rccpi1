@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Data, Storage & Databases: Choose Wisely | rccpi.net</title>
+  <meta name="description" content="Put data in the right place and protect it with backups.">
+  <link rel="canonical" href="https://rccpi.net/data-storage-databases.html">
+  <style>
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu, Cantarell, 'Helvetica Neue', Arial, sans-serif;line-height:1.6;padding:2rem;max-width:880px;margin:auto}
+    h1{font-size:1.8rem;margin-bottom:0.5rem}
+    h2{margin-top:2rem}
+    .answer{background:#f6f8fa;padding:0.8rem 1rem;border-radius:12px}
+    code,pre{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,'Liberation Mono','Courier New',monospace}
+    .meta{color:#666;font-size:0.9rem;margin-bottom:1rem}
+    .toc ul{list-style: none; padding-left: 0}
+    .toc a{text-decoration:none}
+  </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Data, Storage & Databases: Choose Wisely",
+  "about": "S3 vs EFS vs EBS\u2014what goes where",
+  "author": {
+    "@type": "Person",
+    "name": "Rosario Roussin"
+  },
+  "dateModified": "2025-09-28",
+  "description": "Put data in the right place and protect it with backups.",
+  "hasPart": [
+    {
+      "@type": "HowTo",
+      "name": "S3 vs EFS vs EBS\u2014what goes where",
+      "description": "Use S3 for object storage and static assets, EFS for shared POSIX file systems across instances, and EBS for block storage attached to a single instance. Match durability and performance needs, and apply lifecycle rules to control long\u2011term costs.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "name": "Classify data",
+          "text": "Classify data: object, shared FS, or block."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Apply lifecycle and versioning to S3 where needed.",
+          "text": "Apply lifecycle and versioning to S3 where needed."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Right\u2011size volumes and IOPS to match workload.",
+          "text": "Right\u2011size volumes and IOPS to match workload."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Back up regularly; test restores.",
+          "text": "Back up regularly; test restores."
+        }
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "name": "Pick RDS, Aurora, or MySQL on EC2",
+      "description": "Choose RDS for managed convenience, Aurora for higher scale and availability, and self\u2011managed MySQL on EC2 only when you need deep customization. Start managed, then reevaluate if constraints appear.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "name": "List requirements",
+          "text": "List requirements: scale, HA, extensions, budget."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Default to RDS MySQL/Postgres for simplicity.",
+          "text": "Default to RDS MySQL/Postgres for simplicity."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Move to Aurora if you need higher availability.",
+          "text": "Move to Aurora if you need higher availability."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Self\u2011manage only with strong DBA experience.",
+          "text": "Self\u2011manage only with strong DBA experience."
+        }
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "name": "Migrate databases with near\u2011zero downtime",
+      "description": "Use replication or a managed migration service to keep target in sync. Schedule a short write freeze, promote the target, and point apps at the new endpoint. Validate data row counts and error logs before declaring victory.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "name": "Set up replication or migration service.",
+          "text": "Set up replication or migration service."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Sync and monitor lag until cutover time.",
+          "text": "Sync and monitor lag until cutover time."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Freeze writes; promote target; update endpoints.",
+          "text": "Freeze writes; promote target; update endpoints."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Validate data, logs, and performance post\u2011cutover.",
+          "text": "Validate data, logs, and performance post\u2011cutover."
+        }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+<header>
+  <h1>Data, Storage & Databases: Choose Wisely</h1>
+  <p class="meta">Author: Rosario Roussin · Last updated: 2025-09-28</p>
+</header>
+<section class="toc">
+  <h2>On this page</h2>
+  <ul>
+    <li><a href="#storage-choices">S3 vs EFS vs EBS—what goes where</a></li>    <li><a href="#db-choice">Pick RDS, Aurora, or MySQL on EC2</a></li>    <li><a href="#near-zero-downtime-migration">Migrate databases with near‑zero downtime</a></li>  </ul>
+</section>
+<section id="storage-choices">
+  <h2>S3 vs EFS vs EBS—what goes where</h2>
+  <p class="answer">Use S3 for object storage and static assets, EFS for shared POSIX file systems across instances, and EBS for block storage attached to a single instance. Match durability and performance needs, and apply lifecycle rules to control long‑term costs.</p>
+  <h3>Steps</h3>
+  <ol>
+    <li>Classify data: object, shared FS, or block.</li>
+    <li>Apply lifecycle and versioning to S3 where needed.</li>
+    <li>Right‑size volumes and IOPS to match workload.</li>
+    <li>Back up regularly; test restores.</li>
+  </ol>
+</section>
+<section id="db-choice">
+  <h2>Pick RDS, Aurora, or MySQL on EC2</h2>
+  <p class="answer">Choose RDS for managed convenience, Aurora for higher scale and availability, and self‑managed MySQL on EC2 only when you need deep customization. Start managed, then reevaluate if constraints appear.</p>
+  <h3>Steps</h3>
+  <ol>
+    <li>List requirements: scale, HA, extensions, budget.</li>
+    <li>Default to RDS MySQL/Postgres for simplicity.</li>
+    <li>Move to Aurora if you need higher availability.</li>
+    <li>Self‑manage only with strong DBA experience.</li>
+  </ol>
+</section>
+<section id="near-zero-downtime-migration">
+  <h2>Migrate databases with near‑zero downtime</h2>
+  <p class="answer">Use replication or a managed migration service to keep target in sync. Schedule a short write freeze, promote the target, and point apps at the new endpoint. Validate data row counts and error logs before declaring victory.</p>
+  <h3>Steps</h3>
+  <ol>
+    <li>Set up replication or migration service.</li>
+    <li>Sync and monitor lag until cutover time.</li>
+    <li>Freeze writes; promote target; update endpoints.</li>
+    <li>Validate data, logs, and performance post‑cutover.</li>
+  </ol>
+</section>
+</body>
+</html>

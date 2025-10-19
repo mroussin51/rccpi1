@@ -1,0 +1,162 @@
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://rccpi.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "FAQs",
+      "item": "https://rccpi.net/faqs/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Web & App Hosting (WordPress & Static)",
+      "item": "https://rccpi.net/faqs/web-wordpress-hosting.html"
+    }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is Lightsail good for WordPress?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes\u2014it\u2019s straightforward for small to medium sites. Harden it and add backups and caching."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I speed up WordPress?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Use page/object caching, image optimization, and a CDN. Keep plugins lean."
+      }
+    }
+  ]
+}
+</script>
+
+
+<h1 id="primary-question">What’s the best way to host static sites and WordPress on AWS?</h1>
+<p class="answer lead">Serve static sites from S3 and CloudFront with Route 53 DNS. For WordPress, use a hardened container or Lightsail, add page/object caching and image optimization, and schedule automated backups. Keep a staging environment to test updates before pushing to production.</p>
+<div class="tldr card">
+  <h3>TL;DR</h3>
+  <ul class="bullets">
+    <li>Answer-first: see the summary above.</li>
+    <li>Full details and checklists follow below.</li>
+    <li>Book a consult if you want it done for you.</li>
+  </ul>
+</div>
+<p class="internal-links">Related: <a href="migrate-website-to-aws.html">Migration (Websites, Apps, Email, Files)</a> • <a href="analytics-ai-observability.html">Analytics, AI/ML & Observability</a> • <a href="aws-costs-and-finops.html">Cost & FinOps</a></p>
+
+
+
+<nav aria-label="Breadcrumb" class="breadcrumb">
+  <ol>
+    <li><a href="/index.html">Home</a></li>
+    <li><a href="/index.html">FAQs</a></li>
+    <li aria-current="page">Web & App Hosting (WordPress & Static)</li>
+  </ol>
+</nav>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-V8P75P8DHE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-V8P75P8DHE');
+</script>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Web & App Hosting (WordPress & Static) — RCCPI</title>
+  <meta name="description" content="Host static sites and WordPress with caching and CDN.">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="canonical" href="https://rccpi.net/faqs/web-wordpress-hosting.html">
+</head>
+<body>
+<header class="site-header">
+   <div class="container header-inner">
+    <a aria-current="page" aria-label="RCCPI Cloud Home" class="logo" href="index.html">
+     RCCPI LLC HOME
+    </a>
+    <nav aria-label="Primary" class="nav">
+     <a href="../services.html">Services</a>
+     <a href="../pricing.html">Pricing</a>
+     <a href="../email.html">Email</a>
+     <a href="../about.html">About</a>
+     <a class="btn ghost" href="../contact.html#booking">Book</a>
+    </nav>
+   </div>
+</header>
+<main class="site-main">
+  <section class="section">
+    <div class="container">
+
+<h1>Web & App Hosting (WordPress & Static)</h1>
+<p class="subhead">Fast, secure hosting with caching, CDN, and backups.</p>
+<div class="cards">
+  <article class="card">
+    <h3>Static sites</h3>
+    <ul class='bullets'><li>S3 + CloudFront + Route 53</li><li>Automatic invalidations on deploy</li><li>DNS‑01 TLS with Let’s Encrypt (or ACM)</li></ul>
+  </article>
+  <article class="card">
+    <h3>WordPress</h3>
+    <ul class='bullets'><li>Hardened container or Lightsail blueprint</li><li>Object caching, page caching, and image optimization</li><li>Auto‑backups + staging environment</li></ul>
+  </article>
+</div>
+
+<div class="card" style="margin-top:16px">
+  <h3>Next step</h3>
+  <p>Want this implemented for you? Book a free 15‑minute consult and we’ll map the fastest, safest path for your business.</p>
+  <p><a class="btn" href="../contact.html#booking">Book a consult</a></p>
+</div>
+
+
+      <p class="center" style="margin-top:28px;"><a class="btn" href="index.html">← Back to FAQS Topics</a></p>
+    </div>
+  </section>
+</main>
+<footer class="site-footer">
+   <div class="container footer-grid">
+    <div>
+     <div class="logo">RCCPI Cloud</div>
+     <p>
+      Raleigh, NC<br/>
+      <a href="mailto:info@rccpi.net">info@rccpi.net</a>
+     </p>
+    </div>
+    <nav aria-label="Footer" class="footer-nav">
+     <a href="../services.html">Services</a>
+     <a href="../pricing.html">Pricing</a>
+     <a href="../email.html">Email</a>
+     <a href="../about.html">About</a>
+     <a href="../contact.html">Contact</a>
+     <a href="../privacy.html">Privacy</a>
+    </nav>
+    <div class="foot-legal">
+     <p>© RCCPI LLC • All rights reserved.</p>
+    </div>
+   </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-V8P75P8DHE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-V8P75P8DHE');
+</script>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width,initial-scale=1" name="viewport"/>
+  <title>
+   Cloud Readiness Checklist for Small Businesses | RCCPI
+  </title>
+  <meta content="Decide if your small business is ready for the cloud and what to tackle first." name="description"/>
+  <!-- NOTE: Title/Canonical should match the real URL of this page.
+       If this is the cloud-readiness page, keep the canonical below.
+       If this is your home page, change canonical to https://rccpi.net/ -->
+  <link href="style.css" rel="stylesheet"/>
+  <script type="application/ld+json">
+   {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Cloud Readiness Checklist for Small Businesses",
+  "about": "Decide if you’re ready for cloud adoption",
+  "author": {
+    "@type": "Person",
+    "name": "Rosario Roussin"
+  },
+  "dateModified": "2025-09-28",
+  "description": "Decide if your small business is ready for the cloud and what to tackle first.",
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "https://rccpi.net/cloud-readiness.html" },
+  "hasPart": [
+    {
+      "@type": "HowTo",
+      "name": "Decide if you’re ready for cloud adoption",
+      "description": "You’re ready when you can inventory apps/data, enforce MFA and least‑privilege access, budget for a pilot, and restore a backup. Start with low‑risk workloads (static site, backups, email) before touching databases. Make a rollback plan and name one owner for each migration step to keep accountability clear.",
+      "step": [
+        { "@type": "HowToStep", "name": "Inventory apps, data, users, and integrations.", "text": "Inventory apps, data, users, and integrations." },
+        { "@type": "HowToStep", "name": "Enable MFA; apply least‑privilege IAM to admins and services", "text": "Enable MFA; apply least‑privilege IAM to admins and services." },
+        { "@type": "HowToStep", "name": "Pick a small pilot (static site/CDN); define success metrics", "text": "Pick a small pilot (static site/CDN); define success metrics." },
+        { "@type": "HowToStep", "name": "Create budgets and alerts for the pilot account.", "text": "Create budgets and alerts for the pilot account." },
+        { "@type": "HowToStep", "name": "Back up and test a restore before any cutover.", "text": "Back up and test a restore before any cutover." },
+        { "@type": "HowToStep", "name": "Write a rollback plan with exact DNS steps.", "text": "Write a rollback plan with exact DNS steps." }
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "name": "Prioritize what to move first",
+      "description": "Move workloads with low coupling and clear value first: static sites, media assets, and backups. Defer tightly coupled legacy apps and anything lacking tests. Use a simple scoring model (risk, cost impact, complexity) to order the queue and prevent stalled migrations.",
+      "step": [
+        { "@type": "HowToStep", "name": "Score each workload", "text": "Score each workload: risk, complexity, cost impact (1–5)." },
+        { "@type": "HowToStep", "name": "Pick top 1–2 scoring candidates for a pilot.", "text": "Pick top 1–2 scoring candidates for a pilot." },
+        { "@type": "HowToStep", "name": "Define cutover and rollback for each candidate.", "text": "Define cutover and rollback for each candidate." },
+        { "@type": "HowToStep", "name": "Schedule a post‑mortem to capture improvements.", "text": "Schedule a post‑mortem to capture improvements." }
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "name": "Prove ROI with simple KPIs",
+      "description": "Tie outcomes to measurable KPIs: load time, uptime, error rate, and monthly cost. For non‑technical leaders, show before/after charts and a short narrative explaining the change. Lock KPIs into a monthly health report to sustain momentum after launch.",
+      "step": [
+        { "@type": "HowToStep", "name": "Baseline current load time, uptime, errors, cost.", "text": "Baseline current load time, uptime, errors, cost." },
+        { "@type": "HowToStep", "name": "Capture after‑migration metrics with the same tools.", "text": "Capture after‑migration metrics with the same tools." },
+        { "@type": "HowToStep", "name": "Explain deltas in one slide with plain language.", "text": "Explain deltas in one slide with plain language." },
+        { "@type": "HowToStep", "name": "Publish a monthly health report and share widely.", "text": "Publish a monthly health report and share widely." }
+      ]
+    }
+  ]
+}
+  </script>
+  <link href="https://rccpi.net/" rel="canonical"/>
+  <meta content="Rosario Roussin" name="author"/>
+  <meta content="AWS, Cloud Consulting, Raleigh NC, Migrations, Cost Optimization, Security, DevOps" name="keywords"/>
+  <meta content="website" property="og:type"/>
+  <meta content="Cloud Readiness Checklist for Small Businesses | RCCPI" property="og:title"/>
+  <meta content="Decide if your small business is ready for the cloud and what to tackle first." property="og:description"/>
+  <meta content="https://rccpi.net/" property="og:url"/>
+  <meta content="https://rccpi.net/Images/Raleigh_Skyline.jpg" property="og:image"/>
+  <meta content="summary_large_image" name="twitter:card"/>
+  <meta content="Cloud Readiness Checklist for Small Businesses | RCCPI" name="twitter:title"/>
+  <meta content="Decide if your small business is ready for the cloud and what to tackle first." name="twitter:description"/>
+  <meta content="https://rccpi.net/Images/Raleigh_Skyline.jpg" name="twitter:image"/>
+ </head>
+ <body>
+  <header class="site-header">
+   <div class="container header-inner">
+    <a aria-current="page" aria-label="RCCPI Cloud Home" class="btn ghost" href="https://rccpi.net/">
+     RCCPI HOME
+    </a>
+    <nav aria-label="Primary" class="nav">
+     <a href="services.html">
+      Services
+     </a>
+     <a href="pricing.html">
+      Pricing
+     </a>
+     <a href="../site/faqs/index.html">
+      FAQs
+     </a>
+     <a href="about.html">
+      About
+     </a>
+     <a class="btn ghost" href="contact.html#booking">
+      Book
+     </a>
+    </nav>
+   </div>
+  </header>
+  <main class="site-main">
+   <section aria-label="Cloud Readiness" class="hero">
+    <div class="container hero-inner">
+     <div class="hero-copy">
+      <h1>
+       Raleigh Cloud Consultants Pi
+      </h1>
+      <p class="subhead">
+       Your small business is ready for the cloud. We're here to help.
+      </p>
+      <div class="hero-ctas">
+       <a class="btn cta" href="contact.html#booking">
+        Book a 30‑min Consult
+       </a>
+       <a class="btn ghost" href="services.html">
+        See Services
+       </a>
+      </div>
+      <p class="trust-line">
+       Vendor‑neutral • Clear documentation • Hourly billing
+      </p>
+     </div>
+     <div class="hero-art">
+      <img alt="Raleigh skyline" decoding="async" height="333" loading="eager" src="Images/Raleigh_Skyline.jpg" width="500"/>
+     </div>
+    </div>
+   </section>
+   <div class="container">
+    <nav aria-label="On this page" class="toc">
+     <h2>
+      On this page
+     </h2>
+     <ul>
+      <li>
+       <a href="#what-is-cloud-computing">
+        What is Cloud Computing?
+       </a>
+      </li>
+      <li>
+       <a href="#cloud-computing-safe-secure">
+        Is Cloud Computing safe? Secure?
+       </a>
+      </li>
+      <li>
+       <a href="#readiness-basics">
+        How do I have a smooth transition?
+       </a>
+      </li>
+      <li>
+       <a href="#prioritize-workloads">
+        How do I prioritize what to move first?
+       </a>
+      </li>
+      <li>
+       <a href="#prove-roi">
+        Are there KPIs to prove ROI?
+       </a>
+      </li>
+     </ul>
+    </nav>
+    <section id="what-is-cloud-computing">
+     <h2>
+      What is cloud computing and why it should matter to you.
+     </h2>
+     <p class="card">
+      Cloud computing is the delivery of IT resources—like servers, storage, databases, networking, and software—over the internet on a pay-as-you-go basis. Instead of buying and maintaining hardware, you rent exactly what you need from a provider that runs and updates the infrastructure for you.
+     </p>
+     <p class="card">
+      For small businesses, the big wins are availability, redundancy, and cost. Leading cloud platforms spread your apps and data across multiple data centers, so if one server—or even an entire facility—goes down, your site stays up through built-in failover and automated backups. That resilience used to require expensive duplicate hardware; in the cloud it’s built in. And because you’re shifting from large capital purchases (CapEx) to predictable operating expenses (OpEx), you avoid big upfront investments and only pay for what you use. Add in fast scalability for busy seasons, enterprise-grade security and updates managed for you, and anywhere access for your team, and the cloud lets a small business punch well above its weight while staying focused on customers—not servers.
+     </p>
+    </section>
+    <section aria-labelledby="cloud-secure-h2" id="cloud-computing-safe-secure">
+     <h2 id="cloud-secure-h2">
+      The Cloud is safe and secure.
+     </h2>
+     <p class="card">
+      The cloud has security baked in at multiple layers. You can require multi-factor authentication (MFA) for every admin and user, enforce least-privilege access with fine-grained roles, and get continuous monitoring and audit logs by default. Data is encrypted in transit (TLS) and at rest, and services like AWS Key Management Service (KMS) let you control encryption keys—often backed by hardware security modules. On AWS, you don’t log into servers with weak passwords; you use key pairs (or Session Manager) to establish secure, auditable access, and you can rotate or revoke those keys instantly. With 24/7 patching, DDoS protections, WAFs, and automated backups across multiple availability zones, a well-configured cloud environment can be—and often is—more secure than legacy on-site hardware that’s hard to patch, monitor, and staff continuously.
+     </p>
+    </section>
+    <section id="readiness-basics">
+     <h2>
+      Make the conversion to the Cloud with ease
+     </h2>
+     <p class="card">
+      Simply begin with an inventory of apps and data. Be prepared to enforce MFA and least‑privilege access. Develop a budget for a pilot, and have a disaster recovery strategy. Start with low‑risk workloads (static site, backups, email) before touching databases. Make a rollback plan and name one owner for each migration step to keep accountability clear.
+     </p>
+     <h3>
+      Steps
+     </h3>
+     <ol class="steps">
+      <li>
+       Inventory apps, data, users, and integrations.
+      </li>
+      <li>
+       Enable MFA; apply least‑privilege IAM to admins and services.
+      </li>
+      <li>
+       Pick a small pilot (static site/CDN); define success metrics.
+      </li>
+      <li>
+       Create budgets and alerts for the pilot account.
+      </li>
+      <li>
+       Back up and test a restore before any cutover.
+      </li>
+      <li>
+       Write a rollback plan with exact DNS steps.
+      </li>
+     </ol>
+     <h3>
+      Key figures
+     </h3>
+     <ul class="bullets">
+      <li>
+       Pilot timeline: 2–4 weeks.
+      </li>
+      <li>
+       Starter RPO/RTO: 24h / 4h.
+      </li>
+      <li>
+       Budget alarm: notify at 50%, 80%, 100% of monthly cap.
+      </li>
+     </ul>
+    </section>
+    <section id="prioritize-workloads">
+     <h2>
+      Prioritize what to move first
+     </h2>
+     <p class="card">
+      Move workloads with low coupling and clear value first: static sites, media assets, and backups. Defer tightly coupled legacy apps and anything lacking tests. Use a simple scoring model (risk, cost impact, complexity) to order the queue and prevent stalled migrations.
+     </p>
+     <h3>
+      Steps
+     </h3>
+     <ol class="steps">
+      <li>
+       Score each workload: risk, complexity, cost impact (1–5).
+      </li>
+      <li>
+       Pick top 1–2 scoring candidates for a pilot.
+      </li>
+      <li>
+       Define cutover and rollback for each candidate.
+      </li>
+      <li>
+       Schedule a post‑mortem to capture improvements.
+      </li>
+     </ol>
+     <h3>
+      Key figures
+     </h3>
+     <ul class="bullets">
+      <li>
+       Target queue: 3–5 workloads.
+      </li>
+      <li>
+       Success metric: &lt; 30 min rollback.
+      </li>
+     </ul>
+    </section>
+    <section id="prove-roi">
+     <h2>
+      Prove ROI with simple KPIs
+     </h2>
+     <p class="card">
+      Tie outcomes to measurable KPIs: load time, uptime, error rate, and monthly cost. For non‑technical leaders, show before/after charts and a short narrative explaining the change. Lock KPIs into a monthly health report to sustain momentum after launch.
+     </p>
+     <h3>
+      Steps
+     </h3>
+     <ol class="steps">
+      <li>
+       Baseline current load time, uptime, errors, cost.
+      </li>
+      <li>
+       Capture after‑migration metrics with the same tools.
+      </li>
+      <li>
+       Explain deltas in one slide with plain language.
+      </li>
+      <li>
+       Publish a monthly health report and share widely.
+      </li>
+     </ol>
+     <h3>
+      Key figures
+     </h3>
+     <ul class="bullets">
+      <li>
+       Page load goal: &lt; 2.5s global median.
+      </li>
+      <li>
+       Uptime goal: ≥ 99.9% for web property.
+      </li>
+     </ul>
+    </section>
+   </div>
+  </main>
+  <footer class="site-footer">
+   <div class="container footer-grid">
+    <div>
+     <div class="logo">
+      RCCPI Cloud
+     </div>
+     <p>
+      Raleigh, NC
+      <br/>
+      <a href="mailto:info@rccpi.net">
+       info@rccpi.net
+      </a>
+     </p>
+    </div>
+    <nav aria-label="Footer" class="footer-nav">
+     <a href="services.html">
+      Services
+     </a>
+     <a href="pricing.html">
+      Pricing
+     </a>
+     <a href="/faqs/index.html">
+      FAQs
+     </a>
+     <a href="about.html">
+      About
+     </a>
+     <a href="contact.html">
+      Contact
+     </a>
+     <a href="privacy.html">
+      Privacy
+     </a>
+    </nav>
+    <div class="foot-legal">
+     <p>
+      © RCCPI LLC • All rights reserved.
+     </p>
+    </div>
+   </div>
+  </footer>
+ </body>
+</html>

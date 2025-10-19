@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://rccpi.net/</loc><lastmod>2025-09-28</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://rccpi.net/faqs/</loc><lastmod>2025-09-28</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://rccpi.net/faqs/cloud-readiness.html</loc><lastmod>2025-09-28</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://rccpi.net/faqs/aws-architecture-basics.html</loc><lastmod>2025-09-28</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://rccpi.net/faqs/migrate-website-to-aws.html</loc><lastmod>2025-09-28</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://rccpi.net/faqs/aws-costs-and-finops.html</loc><lastmod>2025-09-28</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://rccpi.net/faqs/security-compliance-basics.html</loc><lastmod>2025-09-28</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://rccpi.net/faqs/networking-performance.html</loc><lastmod>2025-09-28</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://rccpi.net/faqs/data-storage-databases.html</loc><lastmod>2025-09-28</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://rccpi.net/faqs/containers-ecs-eks.html</loc><lastmod>2025-09-28</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://rccpi.net/faqs/devops-ci-cd-iac.html</loc><lastmod>2025-09-28</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://rccpi.net/faqs/reliability-backups-dr.html</loc><lastmod>2025-09-28</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://rccpi.net/faqs/web-wordpress-hosting.html</loc><lastmod>2025-09-28</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://rccpi.net/faqs/analytics-ai-observability.html</loc><lastmod>2025-09-28</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://rccpi.net/faqs/governance-iam-accounts.html</loc><lastmod>2025-09-28</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://rccpi.net/faqs/pricing-engagement-slas.html</loc><lastmod>2025-09-28</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+</urlset>

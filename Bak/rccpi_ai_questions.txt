@@ -1,0 +1,146 @@
+AI-Style Questions Prospects Ask About Cloud Consulting
+(Organized for FAQ/Guide Page Planning)
+
+Strategy & Readiness
+- "How do I know if my small business is ready to move to the cloud?"
+- "What should be in a cloud adoption roadmap for a 5–20 person company?"
+- "Which workloads should I move first, and which should stay on-prem?"
+- "AWS vs staying on my local server: what’s the real tradeoff for cost, security, and reliability?"
+- "How do I estimate the total effort (hours, cost, timeline) for a basic migration?"
+- "What KPIs should I track to prove cloud ROI to leadership?"
+
+Architecture & Design
+- "What’s a well-architected design for a simple web app on AWS?"
+- "When do I use EC2 vs AWS Lightsail vs Elastic Beanstalk?"
+- "What is a reference architecture for a brochure site with HTTPS, CDN, and backups?"
+- "How do I design for high availability on a starter budget?"
+- "What belongs in a VPC (subnets, NAT, security groups) for a small team?"
+- "How do I separate dev, test, and prod properly without overcomplicating things?"
+
+Migration (Websites, Apps, Email, Files)
+- "Step-by-step: migrate a WordPress site to AWS with CloudFront and RDS."
+- "How do I lift-and-shift a LAMP stack to AWS with minimal downtime?"
+- "What’s the safest way to move customer data to S3 and keep it private?"
+- "DNS cutover checklist for moving a domain to Route 53."
+- "How do I test the new environment before flipping traffic?"
+- "Rollback plan if something goes wrong mid-migration?"
+
+Cost & FinOps
+- "How much should AWS cost for a simple business website with ~10k visits/month?"
+- "Which AWS services are sneaky expensive and how do I avoid surprises?"
+- "Reserved Instances vs Savings Plans vs On-Demand—what should I pick?"
+- "How do I set up budgets and alerts so I never overspend again?"
+- "What’s a realistic hourly rate for an AWS consultant, and what do I get for it?"
+- "Monthly cost breakdown example for S3 + CloudFront + EC2 + RDS."
+
+Security, Identity & Compliance (HIPAA/GDPR/PCI basics)
+- "Is AWS HIPAA-eligible and how do I get a BAA?"
+- "What’s the minimal security baseline (IAM, MFA, least privilege) for a small shop?"
+- "How do I encrypt data at rest and in transit on AWS?"
+- "What’s a practical incident response plan for a small team?"
+- "How do I meet GDPR basics for a US-based website with EU visitors?"
+- "Security groups vs NACLs—what’s the difference and which do I touch?"
+
+Networking & Performance
+- "How do I make my site load faster globally—CloudFront, caching, or both?"
+- "ALB vs NLB vs CloudFront—when should each be used?"
+- "What’s the right way to set up HTTPS with automatic renewals?"
+- "How do I prevent DDoS on a small budget (AWS Shield, WAF basics)?"
+- "Route 53: weighted vs failover vs latency routing—what should I use?"
+- "How do I set up private subnets and NAT correctly the first time?"
+
+Data, Storage & Databases
+- "S3 vs EFS vs EBS—what do I store where?"
+- "RDS vs Aurora vs running MySQL on EC2—help me choose."
+- "Backups and disaster recovery for small databases—what’s enough?"
+- "How do I migrate a MySQL database with near-zero downtime?"
+- "Versioning and lifecycle policies in S3 to control storage costs."
+- "What’s the simplest way to set up secure database access from my app?"
+
+Containers & Kubernetes (Right-sizing for small teams)
+- "Do I even need Kubernetes, or is Docker on ECS/Fargate enough?"
+- "ECS vs EKS vs plain EC2 for containers—what’s the practical choice?"
+- "How do I deploy a containerized app with CI/CD on AWS?"
+- "What goes in my Dockerfile for production security best practices?"
+- "How do I do blue/green or canary releases with ECS/EKS?"
+- "Logging and monitoring containers without spending a fortune."
+
+DevOps, CI/CD & Infrastructure as Code
+- "GitHub Actions vs AWS CodePipeline—what’s simpler for a small team?"
+- "Terraform vs CloudFormation—why pick one over the other?"
+- "How do I create a CI/CD pipeline for a static site + API on AWS?"
+- "Secrets management: Parameter Store vs Secrets Manager."
+- "What should I monitor (logs, metrics, traces) and where do they live?"
+- "How do I set up automated tests and rollbacks for safer deploys?"
+
+Reliability, Backups & Disaster Recovery
+- "What’s a sane RPO/RTO for a small business website?"
+- "How do I architect multi-AZ or multi-region on a budget?"
+- "What belongs in a backup/restore runbook I can hand to my team?"
+- "How do I test restores regularly so I know backups actually work?"
+- "What’s the difference between HA and DR, and do I need both?"
+- "Chaos-lite: simple failure drills a small team can run quarterly."
+
+Web & App Hosting (WordPress & static sites)
+- "Fastest way to host a static site with HTTPS, CDN, and custom domain on AWS?"
+- "Best practice for WordPress on AWS without managing everything myself?"
+- "How do I secure /wp-admin and block common WordPress attacks?"
+- "Image optimization and caching strategy for speed and SEO."
+- "CloudFront + S3 for static assets—exact steps and gotchas."
+- "How do I set up staging so I can preview changes before going live?"
+
+Analytics, AI/ML & Observability
+- "What’s the simplest analytics stack to understand my traffic and conversions?"
+- "Can I use AI to summarize server logs and alert me to issues?"
+- "How do I add privacy-respecting analytics without cookies?"
+- "AWS services for basic ML (predictions, recommendations) without a data team."
+- "How do I centralize logs/metrics/traces for a small multi-service app?"
+- "What dashboards should leadership see weekly?"
+
+Governance, Access & Account Setup
+- "Single AWS account vs multi-account (orgs) for a small company?"
+- "How do I onboard/offboard employees safely (IAM users, roles, SSO)?"
+- "What tagging strategy should I use for cost and compliance reporting?"
+- "How do I separate client projects and keep their data isolated?"
+- "How do I audit who did what in AWS (CloudTrail basics)?"
+- "What’s the minimum policy set to avoid ‘administrator-everything’?"
+
+Pricing, Engagement & SLAs (Buyer Questions)
+- "What do AWS consultants typically charge per hour in the US Southeast?"
+- "What’s included in a cloud readiness assessment and how long does it take?"
+- "Can you work remotely and offer after-hours support?"
+- "What does an ongoing managed cloud plan cover (patching, monitoring, response)?"
+- "Do you offer fixed-price packages for migrations?"
+- "What SLAs do you commit to for incident response and uptime?"
+
+Local/‘Near Me’ Variants (Geo intent)
+- "Best AWS cloud consultant near me (Raleigh, NC) for small business."
+- "Who can migrate my website to AWS in Raleigh this month?"
+- "HIPAA-aware cloud consultant in the Triangle—any recommendations?"
+- "Local help to speed up my site and reduce AWS bill."
+- "Raleigh NC DevOps and CI/CD setup for a small team—who can do it?"
+- "On-site cloud training for non-technical staff in Raleigh—available?"
+
+Compliance-Specific (Healthcare, Finance, Retail)
+- "Checklist: making a small medical practice HIPAA-ready on AWS."
+- "Can I store PHI in S3 and how do I restrict access?"
+- "PCI basics for a small ecommerce site hosted on AWS."
+- "How do I log and retain access to sensitive data for audits?"
+- "What belongs in a business associate agreement (BAA) with a cloud provider?"
+- "Data retention and deletion policies—what’s reasonable for SMBs?"
+
+Quick How-Tos & Copy-Paste Guides (Highly ‘citable’)
+- "Copy-paste: AWS budget alarms to stop surprise bills."
+- "Step-by-step: free HTTPS certificates with auto-renewal on AWS."
+- "Terraform starter template for a VPC, public/private subnets, and NAT."
+- "Minimal IAM policy for deploy-only GitHub Actions."
+- "S3 lifecycle rules that cut storage costs by 40–60%."
+- "CloudFront caching rules to speed up WordPress and static assets."
+
+Buyer Proof & Risk Reversal
+- "What proof should I ask for before hiring a cloud consultant?"
+- "Example success metrics from a small-business cloud migration."
+- "How do you handle hand-off so I’m not dependent on you forever?"
+- "Can I get documentation/runbooks so my staff can manage day-to-day?"
+- "What do weekly/monthly health reports look like?"
+- "How do you ensure knowledge transfer and avoid vendor lock-in?"

@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DevOps, CI/CD & IaC – RCCPI FAQs</title>
+  <meta name="description" content="Clear, concise answers about DevOps, CI/CD, and Infrastructure as Code for small‑business cloud projects." />
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://rccpi.net/faqs/devops-ci-cd-iac.html" />
+
+  <!-- Sitewide CSS (assumes /style.css is at the web root) -->
+  <link rel="preload" href="../style.css" as="style" />
+  <link rel="stylesheet" href="../style.css" />
+
+  <!-- Optional: Google Analytics tag (if used sitewide) -->
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-V8P75P8DHE"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);} gtag('js', new Date());
+    gtag('config', 'G-V8P75P8DHE');
+  </script> -->
+
+  <!-- FAQ structured data for AEO (mix of Article + FAQPage) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "DevOps, CI/CD & IaC – Explained for Small Businesses",
+    "author": {"@type": "Organization", "name": "Rooster Cloud Computing Pi"},
+    "dateModified": "2025-10-18",
+    "mainEntityOfPage": {"@type": "WebPage", "@id": "https://rccpi.net/faqs/devops-ci-cd-iac.html"}
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is DevOps?",
+        "acceptedAnswer": {"@type": "Answer", "text": "DevOps is the culture and toolset that lets your dev and ops teams ship smaller changes more often with automated checks and rollbacks."}
+      },
+      {
+        "@type": "Question",
+        "name": "What is CI/CD?",
+        "acceptedAnswer": {"@type": "Answer", "text": "CI/CD automates building, testing, and deploying your code so changes are safe, fast, and repeatable."}
+      },
+      {
+        "@type": "Question",
+        "name": "What is Infrastructure as Code (IaC)?",
+        "acceptedAnswer": {"@type": "Answer", "text": "IaC defines servers, networks, and policies in version‑controlled files. It makes environments consistent, testable, and easy to rebuild."}
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <!-- Site Header / Nav (copied from index.html so the theme matches) -->
+  <header class="site-header">
+    <div class="container">
+      <a class="logo" href="/index.html" aria-label="RCCPI home">
+        <!-- If you have a logo image, ensure the path is correct -->
+        <!-- <img src="/Images/logo.svg" alt="RCCPI" width="160" height="40"> -->
+        <span>RCCPI</span>
+      </a>
+      <nav class="main-nav" aria-label="Main">
+        <ul>
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/services.html">Services</a></li>
+          <li><a href="/faqs/">FAQs</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Optional hero area to match your theme -->
+  <section class="hero">
+    <div class="container">
+      <h1>DevOps, CI/CD & IaC</h1>
+      <p class="lead">Plain‑English answers with just enough technical detail to make confident decisions.</p>
+      <!-- <img src="/Images/hero.webp" alt="Cloud systems illustration" width="700" height="390" loading="eager" decoding="async"> -->
+    </div>
+  </section>
+
+  <!-- Main page content -->
+  <main id="content" class="container" role="main">
+    <!-- Short summary answer at the top (AEO‑friendly) -->
+    <section aria-labelledby="concise-answer">
+      <h2 id="concise-answer">Short answer</h2>
+      <p>
+        DevOps is a way of working plus tools that let teams ship updates faster and safer. CI/CD automates build‑test‑deploy.
+        IaC makes your cloud setup repeatable and auditable. Together they raise reliability and cut manual work.
+      </p>
+    </section>
+
+    <!-- Skimmable Q&A (accordion optional with CSS/JS) -->
+    <section class="faq">
+      <h2>Common questions</h2>
+      <details>
+        <summary>What business value do we get?</summary>
+        <div>
+          <ul>
+            <li>Fewer outages (small, reversible changes)</li>
+            <li>Faster releases (automation)</li>
+            <li>Lower costs (repeatable environments)</li>
+          </ul>
+        </div>
+      </details>
+      <details>
+        <summary>Do we need it on day one?</summary>
+        <div>
+          <p>No, but starting with basic CI and IaC prevents painful rewrites later. We can phase it in.</p>
+        </div>
+      </details>
+      <details>
+        <summary>What tools do you use?</summary>
+        <div>
+          <p>GitHub Actions / GitLab CI, Terraform / Ansible, Docker / Kubernetes, plus cloud‑native services.</p>
+        </div>
+      </details>
+    </section>
+
+    <!-- Longer, scannable explanation (maintain your site’s typography) -->
+    <article>
+      <h2>In depth</h2>
+      <h3>DevOps</h3>
+      <p>DevOps blends culture and automation to shorten feedback loops and reduce risk. Key ideas: trunk‑based development, automated tests, observability, and rollbacks.</p>
+
+      <h3>CI/CD</h3>
+      <p>Continuous Integration merges changes frequently with automated builds and tests. Continuous Delivery/Deployment pushes approved builds to staging and production via pipelines.</p>
+
+      <h3>Infrastructure as Code (IaC)</h3>
+      <p>Declare cloud resources in code (Terraform, CloudFormation). Store alongside your app, review with pull requests, and rebuild environments consistently.</p>
+    </article>
+
+    <!-- Clear CTA that fits the theme -->
+    <aside class="cta">
+      <a class="button" href="/contact.html">Talk with us about a phased rollout</a>
+    </aside>
+  </main>
+
+  <!-- Breadcrumbs (visible + Schema.org via microdata for clarity) -->
+  <nav class="breadcrumbs" aria-label="Breadcrumb">
+    <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <a itemprop="item" href="/index.html"><span itemprop="name">Home</span></a>
+        <meta itemprop="position" content="1" />
+      </li>
+      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <a itemprop="item" href="/faqs/"><span itemprop="name">FAQs</span></a>
+        <meta itemprop="position" content="2" />
+      </li>
+      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <span itemprop="name">DevOps, CI/CD & IaC</span>
+        <meta itemprop="position" content="3" />
+      </li>
+    </ol>
+  </nav>
+
+  <!-- Site Footer (copy from index.html) -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Rooster Cloud Computing Pi</p>
+      <nav aria-label="Footer">
+        <ul>
+          <li><a href="/privacy.html">Privacy</a></li>
+          <li><a href="/terms.html">Terms</a></li>
+          <li><a href="/sitemap.html">Sitemap</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    // Keeps the year fresh without touching content
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

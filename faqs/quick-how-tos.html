@@ -1,0 +1,200 @@
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://rccpi.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "FAQs",
+      "item": "https://rccpi.net/faqs/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Quick How-Tos & Copy-Paste Guides",
+      "item": "https://rccpi.net/faqs/quick-how-tos.html"
+    }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "Issue a TLS certificate with DNS-01 (example)",
+  "description": "General pattern for obtaining a certificate using a DNS-01 challenge.",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "Prepare domain",
+      "text": "Confirm you can add TXT records at your DNS provider."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Request challenge",
+      "text": "Run certbot or acme client to request a DNS-01 challenge."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Publish TXT",
+      "text": "Add the provided TXT record. Wait for DNS to propagate."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Verify & fetch cert",
+      "text": "Complete validation and download the certificate and key."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Install",
+      "text": "Install and reload your web server or load balancer."
+    }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Can you tailor scripts to my setup?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes\u2014namespaces, paths, and policies vary. We adapt commands and add rollback steps."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I run how\u2011tos in prod first?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No\u2014validate in staging, then schedule a low\u2011risk maintenance window."
+      }
+    }
+  ]
+}
+</script>
+
+
+<h1 id="primary-question">Where can I find short, copy‑paste cloud guides?</h1>
+<p class="answer lead">Right here. Each how‑to is concise, uses proven commands, and includes caveats and rollback steps. We can tailor scripts to your environment and conventions so you can run them safely in staging before production.</p>
+<div class="tldr card">
+  <h3>TL;DR</h3>
+  <ul class="bullets">
+    <li>Answer-first: see the summary above.</li>
+    <li>Full details and checklists follow below.</li>
+    <li>Book a consult if you want it done for you.</li>
+  </ul>
+</div>
+<p class="internal-links">Related: <a href="migrate-website-to-aws.html">Migration (Websites, Apps, Email, Files)</a> • <a href="web-wordpress-hosting.html">Web & App Hosting (WordPress & Static)</a> • <a href="security-compliance-basics.html">Security, Identity & Compliance</a></p>
+
+
+
+<nav aria-label="Breadcrumb" class="breadcrumb">
+  <ol>
+    <li><a href="/index.html">Home</a></li>
+    <li><a href="/index.html">FAQs</a></li>
+    <li aria-current="page">Quick How-Tos & Copy-Paste Guides</li>
+  </ol>
+</nav>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-V8P75P8DHE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-V8P75P8DHE');
+</script>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Quick How‑Tos & Copy‑Paste Guides — RCCPI</title>
+  <meta name="description" content="Short, actionable guides with exact commands.">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="canonical" href="https://rccpi.net/faqs/quick-how-tos.html">
+</head>
+<body>
+<header class="site-header">
+   <div class="container header-inner">
+    <a aria-current="page" aria-label="RCCPI Cloud Home" class="logo" href="index.html">
+     RCCPI LLC HOME
+    </a>
+    <nav aria-label="Primary" class="nav">
+     <a href="../services.html">Services</a>
+     <a href="../pricing.html">Pricing</a>
+     <a href="../email.html">Email</a>
+     <a href="../about.html">About</a>
+     <a class="btn ghost" href="../contact.html#booking">Book</a>
+    </nav>
+   </div>
+</header>
+<main class="site-main">
+  <section class="section">
+    <div class="container">
+
+<h1>Quick How‑Tos & Copy‑Paste Guides</h1>
+<p class="subhead">Short, verified steps you can run today.</p>
+<div class="cards">
+  <article class="card">
+    <h3>Examples</h3>
+    <ul class='bullets'><li>Issue a Let's Encrypt cert with DNS‑01</li><li>Create an S3 static site behind CloudFront</li><li>Set up automated backups and test a restore</li><li>Attach IAM role and rotate access keys</li></ul>
+  </article>
+</div>
+<div class="faq">
+<details class="qa">
+  <summary><strong>Do you provide full scripts?</strong></summary>
+  <div class="answer"><p>Yes — we can tailor scripts to your environment and conventions.</p></div>
+</details>
+</div>
+
+<div class="card" style="margin-top:16px">
+  <h3>Next step</h3>
+  <p>Want this implemented for you? Book a free 15‑minute consult and we’ll map the fastest, safest path for your business.</p>
+  <p><a class="btn" href="../contact.html#booking">Book a consult</a></p>
+</div>
+
+
+      <p class="center" style="margin-top:28px;"><a class="btn" href="index.html">← Back to FAQS Topics</a></p>
+    </div>
+  </section>
+</main>
+<footer class="site-footer">
+   <div class="container footer-grid">
+    <div>
+     <div class="logo">RCCPI Cloud</div>
+     <p>
+      Raleigh, NC<br/>
+      <a href="mailto:info@rccpi.net">info@rccpi.net</a>
+     </p>
+    </div>
+    <nav aria-label="Footer" class="footer-nav">
+     <a href="../services.html">Services</a>
+     <a href="../pricing.html">Pricing</a>
+     <a href="../email.html">Email</a>
+     <a href="../about.html">About</a>
+     <a href="../contact.html">Contact</a>
+     <a href="../privacy.html">Privacy</a>
+    </nav>
+    <div class="foot-legal">
+     <p>© RCCPI LLC • All rights reserved.</p>
+    </div>
+   </div>
+</footer>
+</body>
+</html>
