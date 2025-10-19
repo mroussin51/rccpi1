@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>DevOps, CI/CD & Infrastructure as Code | rccpi.net</title>
+  <meta name="description" content="Ship safely with automation, reviews, and rollbacks.">
+  <link rel="canonical" href="https://rccpi.net/devops-ci-cd-iac.html">
+  <style>
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu, Cantarell, 'Helvetica Neue', Arial, sans-serif;line-height:1.6;padding:2rem;max-width:880px;margin:auto}
+    h1{font-size:1.8rem;margin-bottom:0.5rem}
+    h2{margin-top:2rem}
+    .answer{background:#f6f8fa;padding:0.8rem 1rem;border-radius:12px}
+    code,pre{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,'Liberation Mono','Courier New',monospace}
+    .meta{color:#666;font-size:0.9rem;margin-bottom:1rem}
+    .toc ul{list-style: none; padding-left: 0}
+    .toc a{text-decoration:none}
+  </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "DevOps, CI/CD & Infrastructure as Code",
+  "about": "A simple CI/CD pipeline that works",
+  "author": {
+    "@type": "Person",
+    "name": "Rosario Roussin"
+  },
+  "dateModified": "2025-09-28",
+  "description": "Ship safely with automation, reviews, and rollbacks.",
+  "hasPart": [
+    {
+      "@type": "HowTo",
+      "name": "A simple CI/CD pipeline that works",
+      "description": "Use repo PRs with checks, build and test on each commit, and deploy to dev automatically. Promote to prod with approvals and change logs. Store secrets in a managed vault and rotate regularly to reduce risk.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "name": "Require PR reviews; run tests on push.",
+          "text": "Require PR reviews; run tests on push."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Build artifact/image; scan for vulnerabilities.",
+          "text": "Build artifact/image; scan for vulnerabilities."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Auto\u2011deploy to dev; gated release to prod.",
+          "text": "Auto\u2011deploy to dev; gated release to prod."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Store secrets in a managed service; rotate.",
+          "text": "Store secrets in a managed service; rotate."
+        }
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "name": "Terraform or CloudFormation?",
+      "description": "Terraform offers multi\u2011cloud and a large module ecosystem; CloudFormation is AWS\u2011native and integrates tightly with IAM and service features. Pick one and standardize to prevent drift and duplication. Modules/stacks keep configurations re\u2011usable and consistent.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "name": "Pick a standard and stick to it.",
+          "text": "Pick a standard and stick to it."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Create reusable modules/stacks.",
+          "text": "Create reusable modules/stacks."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Validate plans/changes in CI before apply.",
+          "text": "Validate plans/changes in CI before apply."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Run drift detection on a schedule.",
+          "text": "Run drift detection on a schedule."
+        }
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "name": "Minimal IAM for deploy\u2011only automation",
+      "description": "Grant automation only what it needs: deploy to specific services, read secrets, read logs. Avoid wildcard admin. Scope by resource ARNs, use conditions where possible, and log all actions for traceability.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "name": "List exact actions required by the pipeline.",
+          "text": "List exact actions required by the pipeline."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Scope permissions to resource ARNs.",
+          "text": "Scope permissions to resource ARNs."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Attach role to CI runner; short session duration.",
+          "text": "Attach role to CI runner; short session duration."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Log and review changes regularly.",
+          "text": "Log and review changes regularly."
+        }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+<header>
+  <h1>DevOps, CI/CD & Infrastructure as Code</h1>
+  <p class="meta">Author: Rosario Roussin · Last updated: 2025-09-28</p>
+</header>
+<section class="toc">
+  <h2>On this page</h2>
+  <ul>
+    <li><a href="#pipeline">A simple CI/CD pipeline that works</a></li>    <li><a href="#iac-choice">Terraform or CloudFormation?</a></li>    <li><a href="#minimal-iam">Minimal IAM for deploy‑only automation</a></li>  </ul>
+</section>
+<section id="pipeline">
+  <h2>A simple CI/CD pipeline that works</h2>
+  <p class="answer">Use repo PRs with checks, build and test on each commit, and deploy to dev automatically. Promote to prod with approvals and change logs. Store secrets in a managed vault and rotate regularly to reduce risk.</p>
+  <h3>Steps</h3>
+  <ol>
+    <li>Require PR reviews; run tests on push.</li>
+    <li>Build artifact/image; scan for vulnerabilities.</li>
+    <li>Auto‑deploy to dev; gated release to prod.</li>
+    <li>Store secrets in a managed service; rotate.</li>
+  </ol>
+</section>
+<section id="iac-choice">
+  <h2>Terraform or CloudFormation?</h2>
+  <p class="answer">Terraform offers multi‑cloud and a large module ecosystem; CloudFormation is AWS‑native and integrates tightly with IAM and service features. Pick one and standardize to prevent drift and duplication. Modules/stacks keep configurations re‑usable and consistent.</p>
+  <h3>Steps</h3>
+  <ol>
+    <li>Pick a standard and stick to it.</li>
+    <li>Create reusable modules/stacks.</li>
+    <li>Validate plans/changes in CI before apply.</li>
+    <li>Run drift detection on a schedule.</li>
+  </ol>
+</section>
+<section id="minimal-iam">
+  <h2>Minimal IAM for deploy‑only automation</h2>
+  <p class="answer">Grant automation only what it needs: deploy to specific services, read secrets, read logs. Avoid wildcard admin. Scope by resource ARNs, use conditions where possible, and log all actions for traceability.</p>
+  <h3>Steps</h3>
+  <ol>
+    <li>List exact actions required by the pipeline.</li>
+    <li>Scope permissions to resource ARNs.</li>
+    <li>Attach role to CI runner; short session duration.</li>
+    <li>Log and review changes regularly.</li>
+  </ol>
+  <h3>Snippet</h3>
+  <pre><code>{
+  "Version":"2012-10-17",
+  "Statement":[{
+    "Effect":"Allow",
+    "Action":["ecs:UpdateService","iam:PassRole","ecr:*","logs:CreateLogStream","logs:PutLogEvents"],
+    "Resource":"*"
+  }]
+}</code></pre>
+</section>
+</body>
+</html>

@@ -1,12 +1,12 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Website Migration to AWS: Zero‑Drama Cutovers | rccpi.net</title>
-  <meta name="description" content="Plan and execute safe, testable migrations for sites and apps.">
-  <link rel="canonical" href="https://rccpi.net/migrate-website-to-aws.html">
-  <style>
+<head><base href="/"/><link href="/style.css" rel="stylesheet"/>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>Website Migration to AWS: Zero‑Drama Cutovers | rccpi.net</title>
+<meta content="Plan and execute safe, testable migrations for sites and apps." name="description"/>
+<link href="https://rccpi.net/migrate-website-to-aws.html" rel="canonical"/>
+<style>
     body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu, Cantarell, 'Helvetica Neue', Arial, sans-serif;line-height:1.6;padding:2rem;max-width:880px;margin:auto}
     h1{font-size:1.8rem;margin-bottom:0.5rem}
     h2{margin-top:2rem}
@@ -16,7 +16,7 @@
     .toc ul{list-style: none; padding-left: 0}
     .toc a{text-decoration:none}
   </style>
-  <script type="application/ld+json">
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Article",
@@ -121,60 +121,60 @@
 </head>
 <body>
 <header>
-  <h1>Website Migration to AWS: Zero‑Drama Cutovers</h1>
-  <p class="meta">Author: Rosario Roussin · Last updated: 2025-09-28</p>
+<h1>Website Migration to AWS: Zero‑Drama Cutovers</h1>
+<p class="meta">Author: Rosario Roussin · Last updated: 2025-09-28</p>
 </header>
 <section class="toc">
-  <h2>On this page</h2>
-  <ul>
-    <li><a href="#wp-to-aws">Migrate WordPress with CloudFront and RDS</a></li>    <li><a href="#lamp-lift-shift">Lift‑and‑shift a LAMP stack with minimal downtime</a></li>    <li><a href="#dns-cutover">DNS cutover checklist you can trust</a></li>  </ul>
+<h2>On this page</h2>
+<ul>
+<li><a href="#wp-to-aws">Migrate WordPress with CloudFront and RDS</a></li> <li><a href="#lamp-lift-shift">Lift‑and‑shift a LAMP stack with minimal downtime</a></li> <li><a href="#dns-cutover">DNS cutover checklist you can trust</a></li> </ul>
 </section>
 <section id="wp-to-aws">
-  <h2>Migrate WordPress with CloudFront and RDS</h2>
-  <p class="answer">Freeze content, export database/files, provision RDS for MySQL, and move uploads to S3 with a plugin. Put CloudFront in front of the site and warm the cache. Dry‑run DNS cutover, then flip TTL‑reduced records during a low‑traffic window with a rollback ready.</p>
-  <h3>Steps</h3>
-  <ol>
-    <li>Freeze changes; back up DB and wp-content.</li>
-    <li>Provision RDS; import DB; update wp-config.php.</li>
-    <li>Move media to S3; integrate CloudFront.</li>
-    <li>Warm cache; test with hosts file or preview domain.</li>
-    <li>Reduce TTL; execute cutover; monitor and rollback if needed.</li>
-  </ol>
-  <h3>Key figures</h3>
-  <ul>
-    <li>Pre‑cutover TTL: 60–300s.</li>
-    <li>Cache warmup: homepage + top 20 URLs.</li>
-  </ul>
+<h2>Migrate WordPress with CloudFront and RDS</h2>
+<p class="answer">Freeze content, export database/files, provision RDS for MySQL, and move uploads to S3 with a plugin. Put CloudFront in front of the site and warm the cache. Dry‑run DNS cutover, then flip TTL‑reduced records during a low‑traffic window with a rollback ready.</p>
+<h3>Steps</h3>
+<ol>
+<li>Freeze changes; back up DB and wp-content.</li>
+<li>Provision RDS; import DB; update wp-config.php.</li>
+<li>Move media to S3; integrate CloudFront.</li>
+<li>Warm cache; test with hosts file or preview domain.</li>
+<li>Reduce TTL; execute cutover; monitor and rollback if needed.</li>
+</ol>
+<h3>Key figures</h3>
+<ul>
+<li>Pre‑cutover TTL: 60–300s.</li>
+<li>Cache warmup: homepage + top 20 URLs.</li>
+</ul>
 </section>
 <section id="lamp-lift-shift">
-  <h2>Lift‑and‑shift a LAMP stack with minimal downtime</h2>
-  <p class="answer">Snapshot the server, rsync files to new instances, and use a temporary read replica or maintenance window to migrate the database. Verify app health behind a temporary hostname and swap DNS only after automated smoke tests pass.</p>
-  <h3>Steps</h3>
-  <ol>
-    <li>Snapshot source; rsync app and configs.</li>
-    <li>Establish DB replica or maintenance window.</li>
-    <li>Run smoke tests on the new environment.</li>
-    <li>Switch DNS; monitor errors and logs.</li>
-  </ol>
-  <h3>Key figures</h3>
-  <ul>
-    <li>Downtime target: < 15 minutes for DB cutover.</li>
-  </ul>
+<h2>Lift‑and‑shift a LAMP stack with minimal downtime</h2>
+<p class="answer">Snapshot the server, rsync files to new instances, and use a temporary read replica or maintenance window to migrate the database. Verify app health behind a temporary hostname and swap DNS only after automated smoke tests pass.</p>
+<h3>Steps</h3>
+<ol>
+<li>Snapshot source; rsync app and configs.</li>
+<li>Establish DB replica or maintenance window.</li>
+<li>Run smoke tests on the new environment.</li>
+<li>Switch DNS; monitor errors and logs.</li>
+</ol>
+<h3>Key figures</h3>
+<ul>
+<li>Downtime target: &lt; 15 minutes for DB cutover.</li>
+</ul>
 </section>
 <section id="dns-cutover">
-  <h2>DNS cutover checklist you can trust</h2>
-  <p class="answer">Lower TTL, validate new endpoints, set health checks, and use weighted routing to shift a small portion of traffic first. Keep old infra warm for rollback. Document exact records to change, with timestamps and success criteria to avoid confusion.</p>
-  <h3>Steps</h3>
-  <ol>
-    <li>Lower TTL days ahead; confirm propagation.</li>
-    <li>Validate new IPs/ALB/CloudFront and TLS.</li>
-    <li>Use weighted routing (e.g., 10% → 50% → 100%).</li>
-    <li>Keep old stack hot for fast rollback.</li>
-  </ol>
-  <h3>Key figures</h3>
-  <ul>
-    <li>Rollback commitment: < 30 minutes to revert.</li>
-  </ul>
+<h2>DNS cutover checklist you can trust</h2>
+<p class="answer">Lower TTL, validate new endpoints, set health checks, and use weighted routing to shift a small portion of traffic first. Keep old infra warm for rollback. Document exact records to change, with timestamps and success criteria to avoid confusion.</p>
+<h3>Steps</h3>
+<ol>
+<li>Lower TTL days ahead; confirm propagation.</li>
+<li>Validate new IPs/ALB/CloudFront and TLS.</li>
+<li>Use weighted routing (e.g., 10% → 50% → 100%).</li>
+<li>Keep old stack hot for fast rollback.</li>
+</ol>
+<h3>Key figures</h3>
+<ul>
+<li>Rollback commitment: &lt; 30 minutes to revert.</li>
+</ul>
 </section>
 </body>
 </html>

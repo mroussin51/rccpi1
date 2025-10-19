@@ -1,12 +1,12 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Data, Storage & Databases: Choose Wisely | rccpi.net</title>
-  <meta name="description" content="Put data in the right place and protect it with backups.">
-  <link rel="canonical" href="https://rccpi.net/data-storage-databases.html">
-  <style>
+<head><base href="/"/><link href="/style.css" rel="stylesheet"/>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>Data, Storage &amp; Databases: Choose Wisely | rccpi.net</title>
+<meta content="Put data in the right place and protect it with backups." name="description"/>
+<link href="https://rccpi.net/data-storage-databases.html" rel="canonical"/>
+<style>
     body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu, Cantarell, 'Helvetica Neue', Arial, sans-serif;line-height:1.6;padding:2rem;max-width:880px;margin:auto}
     h1{font-size:1.8rem;margin-bottom:0.5rem}
     h2{margin-top:2rem}
@@ -16,7 +16,7 @@
     .toc ul{list-style: none; padding-left: 0}
     .toc a{text-decoration:none}
   </style>
-  <script type="application/ld+json">
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Article",
@@ -116,46 +116,46 @@
 </head>
 <body>
 <header>
-  <h1>Data, Storage & Databases: Choose Wisely</h1>
-  <p class="meta">Author: Rosario Roussin · Last updated: 2025-09-28</p>
+<h1>Data, Storage &amp; Databases: Choose Wisely</h1>
+<p class="meta">Author: Rosario Roussin · Last updated: 2025-09-28</p>
 </header>
 <section class="toc">
-  <h2>On this page</h2>
-  <ul>
-    <li><a href="#storage-choices">S3 vs EFS vs EBS—what goes where</a></li>    <li><a href="#db-choice">Pick RDS, Aurora, or MySQL on EC2</a></li>    <li><a href="#near-zero-downtime-migration">Migrate databases with near‑zero downtime</a></li>  </ul>
+<h2>On this page</h2>
+<ul>
+<li><a href="#storage-choices">S3 vs EFS vs EBS—what goes where</a></li> <li><a href="#db-choice">Pick RDS, Aurora, or MySQL on EC2</a></li> <li><a href="#near-zero-downtime-migration">Migrate databases with near‑zero downtime</a></li> </ul>
 </section>
 <section id="storage-choices">
-  <h2>S3 vs EFS vs EBS—what goes where</h2>
-  <p class="answer">Use S3 for object storage and static assets, EFS for shared POSIX file systems across instances, and EBS for block storage attached to a single instance. Match durability and performance needs, and apply lifecycle rules to control long‑term costs.</p>
-  <h3>Steps</h3>
-  <ol>
-    <li>Classify data: object, shared FS, or block.</li>
-    <li>Apply lifecycle and versioning to S3 where needed.</li>
-    <li>Right‑size volumes and IOPS to match workload.</li>
-    <li>Back up regularly; test restores.</li>
-  </ol>
+<h2>S3 vs EFS vs EBS—what goes where</h2>
+<p class="answer">Use S3 for object storage and static assets, EFS for shared POSIX file systems across instances, and EBS for block storage attached to a single instance. Match durability and performance needs, and apply lifecycle rules to control long‑term costs.</p>
+<h3>Steps</h3>
+<ol>
+<li>Classify data: object, shared FS, or block.</li>
+<li>Apply lifecycle and versioning to S3 where needed.</li>
+<li>Right‑size volumes and IOPS to match workload.</li>
+<li>Back up regularly; test restores.</li>
+</ol>
 </section>
 <section id="db-choice">
-  <h2>Pick RDS, Aurora, or MySQL on EC2</h2>
-  <p class="answer">Choose RDS for managed convenience, Aurora for higher scale and availability, and self‑managed MySQL on EC2 only when you need deep customization. Start managed, then reevaluate if constraints appear.</p>
-  <h3>Steps</h3>
-  <ol>
-    <li>List requirements: scale, HA, extensions, budget.</li>
-    <li>Default to RDS MySQL/Postgres for simplicity.</li>
-    <li>Move to Aurora if you need higher availability.</li>
-    <li>Self‑manage only with strong DBA experience.</li>
-  </ol>
+<h2>Pick RDS, Aurora, or MySQL on EC2</h2>
+<p class="answer">Choose RDS for managed convenience, Aurora for higher scale and availability, and self‑managed MySQL on EC2 only when you need deep customization. Start managed, then reevaluate if constraints appear.</p>
+<h3>Steps</h3>
+<ol>
+<li>List requirements: scale, HA, extensions, budget.</li>
+<li>Default to RDS MySQL/Postgres for simplicity.</li>
+<li>Move to Aurora if you need higher availability.</li>
+<li>Self‑manage only with strong DBA experience.</li>
+</ol>
 </section>
 <section id="near-zero-downtime-migration">
-  <h2>Migrate databases with near‑zero downtime</h2>
-  <p class="answer">Use replication or a managed migration service to keep target in sync. Schedule a short write freeze, promote the target, and point apps at the new endpoint. Validate data row counts and error logs before declaring victory.</p>
-  <h3>Steps</h3>
-  <ol>
-    <li>Set up replication or migration service.</li>
-    <li>Sync and monitor lag until cutover time.</li>
-    <li>Freeze writes; promote target; update endpoints.</li>
-    <li>Validate data, logs, and performance post‑cutover.</li>
-  </ol>
+<h2>Migrate databases with near‑zero downtime</h2>
+<p class="answer">Use replication or a managed migration service to keep target in sync. Schedule a short write freeze, promote the target, and point apps at the new endpoint. Validate data row counts and error logs before declaring victory.</p>
+<h3>Steps</h3>
+<ol>
+<li>Set up replication or migration service.</li>
+<li>Sync and monitor lag until cutover time.</li>
+<li>Freeze writes; promote target; update endpoints.</li>
+<li>Validate data, logs, and performance post‑cutover.</li>
+</ol>
 </section>
 </body>
 </html>

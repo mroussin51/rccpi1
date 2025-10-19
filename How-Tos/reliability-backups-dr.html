@@ -1,12 +1,12 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Reliability, Backups & Disaster Recovery | rccpi.net</title>
-  <meta name="description" content="Build confidence with clear RPO/RTO and regular restore tests.">
-  <link rel="canonical" href="https://rccpi.net/reliability-backups-dr.html">
-  <style>
+<head><base href="/"/><link href="/style.css" rel="stylesheet"/>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>Reliability, Backups &amp; Disaster Recovery | rccpi.net</title>
+<meta content="Build confidence with clear RPO/RTO and regular restore tests." name="description"/>
+<link href="https://rccpi.net/reliability-backups-dr.html" rel="canonical"/>
+<style>
     body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu, Cantarell, 'Helvetica Neue', Arial, sans-serif;line-height:1.6;padding:2rem;max-width:880px;margin:auto}
     h1{font-size:1.8rem;margin-bottom:0.5rem}
     h2{margin-top:2rem}
@@ -16,7 +16,7 @@
     .toc ul{list-style: none; padding-left: 0}
     .toc a{text-decoration:none}
   </style>
-  <script type="application/ld+json">
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Article",
@@ -116,46 +116,46 @@
 </head>
 <body>
 <header>
-  <h1>Reliability, Backups & Disaster Recovery</h1>
-  <p class="meta">Author: Rosario Roussin · Last updated: 2025-09-28</p>
+<h1>Reliability, Backups &amp; Disaster Recovery</h1>
+<p class="meta">Author: Rosario Roussin · Last updated: 2025-09-28</p>
 </header>
 <section class="toc">
-  <h2>On this page</h2>
-  <ul>
-    <li><a href="#rpo-rto">Set sane RPO/RTO targets</a></li>    <li><a href="#backup-runbook">What belongs in a backup/restore runbook</a></li>    <li><a href="#ha-vs-dr">HA vs DR: what you actually need</a></li>  </ul>
+<h2>On this page</h2>
+<ul>
+<li><a href="#rpo-rto">Set sane RPO/RTO targets</a></li> <li><a href="#backup-runbook">What belongs in a backup/restore runbook</a></li> <li><a href="#ha-vs-dr">HA vs DR: what you actually need</a></li> </ul>
 </section>
 <section id="rpo-rto">
-  <h2>Set sane RPO/RTO targets</h2>
-  <p class="answer">Define how much data you can afford to lose (RPO) and how long you can be down (RTO). Start with 24h/4h for small sites and refine as business needs grow. Align backup frequency and architecture to meet these targets without overspending.</p>
-  <h3>Steps</h3>
-  <ol>
-    <li>Agree on RPO/RTO with stakeholders.</li>
-    <li>Match backup schedules to RPO.</li>
-    <li>Design HA or warm‑standby to meet RTO.</li>
-    <li>Test restores and failovers regularly.</li>
-  </ol>
+<h2>Set sane RPO/RTO targets</h2>
+<p class="answer">Define how much data you can afford to lose (RPO) and how long you can be down (RTO). Start with 24h/4h for small sites and refine as business needs grow. Align backup frequency and architecture to meet these targets without overspending.</p>
+<h3>Steps</h3>
+<ol>
+<li>Agree on RPO/RTO with stakeholders.</li>
+<li>Match backup schedules to RPO.</li>
+<li>Design HA or warm‑standby to meet RTO.</li>
+<li>Test restores and failovers regularly.</li>
+</ol>
 </section>
 <section id="backup-runbook">
-  <h2>What belongs in a backup/restore runbook</h2>
-  <p class="answer">List systems, data locations, credentials, exact commands, and validation steps. Include who approves a restore and how to communicate status. Store the runbook in two places and test twice a year to keep it current.</p>
-  <h3>Steps</h3>
-  <ol>
-    <li>Inventory critical systems and data paths.</li>
-    <li>Document commands and success checks.</li>
-    <li>Define roles, approvals, and communications.</li>
-    <li>Test and update on a set cadence.</li>
-  </ol>
+<h2>What belongs in a backup/restore runbook</h2>
+<p class="answer">List systems, data locations, credentials, exact commands, and validation steps. Include who approves a restore and how to communicate status. Store the runbook in two places and test twice a year to keep it current.</p>
+<h3>Steps</h3>
+<ol>
+<li>Inventory critical systems and data paths.</li>
+<li>Document commands and success checks.</li>
+<li>Define roles, approvals, and communications.</li>
+<li>Test and update on a set cadence.</li>
+</ol>
 </section>
 <section id="ha-vs-dr">
-  <h2>HA vs DR: what you actually need</h2>
-  <p class="answer">High availability keeps services running through localized failures; disaster recovery brings them back after major outages. Start with multi‑AZ and backups; consider multi‑region only if downtime costs justify the complexity.</p>
-  <h3>Steps</h3>
-  <ol>
-    <li>Enable multi‑AZ where supported.</li>
-    <li>Back up configs and data frequently.</li>
-    <li>Consider multi‑region for critical apps only.</li>
-    <li>Review costs vs downtime impact annually.</li>
-  </ol>
+<h2>HA vs DR: what you actually need</h2>
+<p class="answer">High availability keeps services running through localized failures; disaster recovery brings them back after major outages. Start with multi‑AZ and backups; consider multi‑region only if downtime costs justify the complexity.</p>
+<h3>Steps</h3>
+<ol>
+<li>Enable multi‑AZ where supported.</li>
+<li>Back up configs and data frequently.</li>
+<li>Consider multi‑region for critical apps only.</li>
+<li>Review costs vs downtime impact annually.</li>
+</ol>
 </section>
 </body>
 </html>

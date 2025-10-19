@@ -1,0 +1,171 @@
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://rccpi.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "FAQs",
+      "item": "https://rccpi.net/faqs/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Cloud Readiness & Strategy",
+      "item": "https://rccpi.net/faqs/cloud-readiness.html"
+    }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How long does a small business cloud migration take?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A brochure site may move in hours; multi\u2011app environments can take days to weeks depending on data size, integrations, test coverage, and cutover windows."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are the biggest early risks to watch?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Unclear DNS plans, missing backups, and untested rollbacks. Lower DNS TTL early and practice cutover steps."
+      }
+    }
+  ]
+}
+</script>
+
+
+<h1 id="primary-question">What is cloud readiness and how do I assess it?</h1>
+<p class="answer lead">Cloud readiness evaluates your apps, data, security, and team to decide if, when, and how to move to the cloud. A quick assessment documents your current state, clarifies goals, identifies risks, and produces a phased roadmap—pilot, migrate, then optimize—aligned to uptime, cost, and recovery targets.</p>
+<div class="tldr card">
+  <h3>TL;DR</h3>
+  <ul class="bullets">
+    <li>Answer-first: see the summary above.</li>
+    <li>Full details and checklists follow below.</li>
+    <li>Book a consult if you want it done for you.</li>
+  </ul>
+</div>
+<p class="internal-links">Related: <a href="aws-architecture-basics.html">Architecture & Design</a> • <a href="security-compliance-basics.html">Security, Identity & Compliance</a> • <a href="aws-costs-and-finops.html">Cost & FinOps</a></p>
+
+
+
+<nav aria-label="Breadcrumb" class="breadcrumb">
+  <ol>
+    <li><a href="/index.html">Home</a></li>
+    <li><a href="/index.html">FAQs</a></li>
+    <li aria-current="page">Cloud Readiness & Strategy</li>
+  </ol>
+</nav>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-V8P75P8DHE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-V8P75P8DHE');
+</script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cloud Readiness & Strategy — RCCPI</title>
+  <meta name="description" content="How to assess readiness and plan your small-business cloud move.">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="canonical" href="https://rccpi.net/faqs/cloud-readiness.html">
+</head>
+<body>
+<header class="site-header">
+   <div class="container header-inner">
+    <a aria-current="page" aria-label="RCCPI Cloud Home" class="logo" href="index.html">
+     RCCPI LLC HOME
+    </a>
+    <nav aria-label="Primary" class="nav">
+     <a href="services.html">Services</a>
+     <a href="pricing.html">Pricing</a>
+     <a href="email.html">Email</a>
+     <a href="about.html">About</a>
+     <a class="btn ghost" href="contact.html#booking">Book</a>
+    </nav>
+   </div>
+</header>
+<main class="site-main">
+  <section class="section">
+    <div class="container">
+
+<h1>Cloud Readiness & Strategy</h1>
+<p class="subhead">A fast, practical readiness check tailored for small businesses.</p>
+<div class="cards">
+  <article class="card">
+    <h3>Readiness checklist</h3>
+    <ul class='bullets'><li>Inventory apps, data, identities, and integrations</li><li>Classify data sensitivity and retention requirements</li><li>Define success metrics (uptime, latency, costs, recovery)</li><li>Choose landing zone: single AWS account vs. multi‑account</li><li>Decide “lift‑and‑shift” vs. “refactor” per workload</li><li>Plan zero‑downtime cutovers and a rollback path</li></ul>
+  </article>
+  <article class="card">
+    <h3>Fast assessment workshop (2–4 hours)</h3>
+    <ul class='bullets'><li>Current state: apps, pain points, constraints</li><li>Target state: security, reliability, and budget</li><li>Gap analysis: quick wins and blockers</li><li>Roadmap with phases: pilot → migrate → optimize</li></ul>
+  </article>
+</div>
+<div class="faq">
+<details class="qa">
+  <summary><strong>How long does migration usually take?</strong></summary>
+  <div class="answer"><p>A basic brochure website can move in hours; a multi‑app environment may take days to weeks depending on data, integrations, and testing.</p></div>
+</details>
+<details class="qa">
+  <summary><strong>What skills do we need in‑house?</strong></summary>
+  <div class="answer"><p>We can handle architecture and implementation while your team focuses on operations and training.</p></div>
+</details>
+</div>
+
+<div class="card" style="margin-top:16px">
+  <h3>Next step</h3>
+  <p>Want this implemented for you? Book a free 15‑minute consult and we’ll map the fastest, safest path for your business.</p>
+  <p><a class="btn" href="contact.html#booking">Book a consult</a></p>
+</div>
+
+
+      <p class="center" style="margin-top:28px;"><a class="btn" href="index.html">← Back to FAQS Topics</a></p>
+    </div>
+  </section>
+</main>
+<footer class="site-footer">
+   <div class="container footer-grid">
+    <div>
+     <div class="logo">RCCPI Cloud</div>
+     <p>
+      Raleigh, NC<br/>
+      <a href="mailto:info@rccpi.net">info@rccpi.net</a>
+     </p>
+    </div>
+    <nav aria-label="Footer" class="footer-nav">
+     <a href="services.html">Services</a>
+     <a href="pricing.html">Pricing</a>
+     <a href="email.html">Email</a>
+     <a href="about.html">About</a>
+     <a href="contact.html">Contact</a>
+     <a href="privacy.html">Privacy</a>
+    </nav>
+    <div class="foot-legal">
+     <p>© RCCPI LLC • All rights reserved.</p>
+    </div>
+   </div>
+</footer>
+</body>
+</html>

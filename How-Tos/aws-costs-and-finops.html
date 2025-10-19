@@ -1,12 +1,12 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>AWS Costs & FinOps for Small Sites | rccpi.net</title>
-  <meta name="description" content="Keep bills predictable with budgets, right‑sizing, and caching.">
-  <link rel="canonical" href="https://rccpi.net/aws-costs-and-finops.html">
-  <style>
+<head><base href="/"/><link href="/style.css" rel="stylesheet"/>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>AWS Costs &amp; FinOps for Small Sites | rccpi.net</title>
+<meta content="Keep bills predictable with budgets, right‑sizing, and caching." name="description"/>
+<link href="https://rccpi.net/aws-costs-and-finops.html" rel="canonical"/>
+<style>
     body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu, Cantarell, 'Helvetica Neue', Arial, sans-serif;line-height:1.6;padding:2rem;max-width:880px;margin:auto}
     h1{font-size:1.8rem;margin-bottom:0.5rem}
     h2{margin-top:2rem}
@@ -16,7 +16,7 @@
     .toc ul{list-style: none; padding-left: 0}
     .toc a{text-decoration:none}
   </style>
-  <script type="application/ld+json">
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Article",
@@ -116,60 +116,60 @@
 </head>
 <body>
 <header>
-  <h1>AWS Costs & FinOps for Small Sites</h1>
-  <p class="meta">Author: Rosario Roussin · Last updated: 2025-09-28</p>
+<h1>AWS Costs &amp; FinOps for Small Sites</h1>
+<p class="meta">Author: Rosario Roussin · Last updated: 2025-09-28</p>
 </header>
 <section class="toc">
-  <h2>On this page</h2>
-  <ul>
-    <li><a href="#cost-estimate">Estimate costs for a simple brochure site</a></li>    <li><a href="#avoid-surprises">Avoid surprise costs</a></li>    <li><a href="#commitments">Use Savings Plans wisely</a></li>  </ul>
+<h2>On this page</h2>
+<ul>
+<li><a href="#cost-estimate">Estimate costs for a simple brochure site</a></li> <li><a href="#avoid-surprises">Avoid surprise costs</a></li> <li><a href="#commitments">Use Savings Plans wisely</a></li> </ul>
 </section>
 <section id="cost-estimate">
-  <h2>Estimate costs for a simple brochure site</h2>
-  <p class="answer">For a static site on S3 + CloudFront, expect a low double‑digit monthly bill at modest traffic. Dynamic sites add compute and database costs. Cache aggressively, choose appropriate storage classes, and set budgets with notifications to prevent runaways.</p>
-  <h3>Steps</h3>
-  <ol>
-    <li>Classify site: static vs dynamic.</li>
-    <li>Enable CloudFront caching for assets and HTML.</li>
-    <li>Pick right storage classes and lifecycle rules.</li>
-    <li>Create monthly and anomaly budgets with email alerts.</li>
-  </ol>
-  <h3>Key figures</h3>
-  <ul>
-    <li>Cache hit goal: 70%+ for static assets.</li>
-    <li>Alert thresholds: 50/80/100% of budget.</li>
-  </ul>
+<h2>Estimate costs for a simple brochure site</h2>
+<p class="answer">For a static site on S3 + CloudFront, expect a low double‑digit monthly bill at modest traffic. Dynamic sites add compute and database costs. Cache aggressively, choose appropriate storage classes, and set budgets with notifications to prevent runaways.</p>
+<h3>Steps</h3>
+<ol>
+<li>Classify site: static vs dynamic.</li>
+<li>Enable CloudFront caching for assets and HTML.</li>
+<li>Pick right storage classes and lifecycle rules.</li>
+<li>Create monthly and anomaly budgets with email alerts.</li>
+</ol>
+<h3>Key figures</h3>
+<ul>
+<li>Cache hit goal: 70%+ for static assets.</li>
+<li>Alert thresholds: 50/80/100% of budget.</li>
+</ul>
 </section>
 <section id="avoid-surprises">
-  <h2>Avoid surprise costs</h2>
-  <p class="answer">Set account budgets, enable cost anomaly detection, restrict expensive instance families, and audit idle resources monthly. Prefer serverless or Fargate for spiky workloads to map cost to usage without paying for idle capacity.</p>
-  <h3>Steps</h3>
-  <ol>
-    <li>Enable budgets and anomaly detection.</li>
-    <li>Tag resources; schedule reports by tag.</li>
-    <li>Turn off/dev‑size non‑prod nightly or on weekends.</li>
-    <li>Prefer serverless/Fargate for bursty jobs.</li>
-  </ol>
-  <h3>Key figures</h3>
-  <ul>
-    <li>Idle resource review: monthly.</li>
-    <li>Savings target: 20–40% after first tune‑up.</li>
-  </ul>
+<h2>Avoid surprise costs</h2>
+<p class="answer">Set account budgets, enable cost anomaly detection, restrict expensive instance families, and audit idle resources monthly. Prefer serverless or Fargate for spiky workloads to map cost to usage without paying for idle capacity.</p>
+<h3>Steps</h3>
+<ol>
+<li>Enable budgets and anomaly detection.</li>
+<li>Tag resources; schedule reports by tag.</li>
+<li>Turn off/dev‑size non‑prod nightly or on weekends.</li>
+<li>Prefer serverless/Fargate for bursty jobs.</li>
+</ol>
+<h3>Key figures</h3>
+<ul>
+<li>Idle resource review: monthly.</li>
+<li>Savings target: 20–40% after first tune‑up.</li>
+</ul>
 </section>
 <section id="commitments">
-  <h2>Use Savings Plans wisely</h2>
-  <p class="answer">Start with no commitments until usage stabilizes, then buy 1‑year Compute Savings Plans at conservative baselines. Keep some on‑demand capacity for growth. Reassess quarterly and adjust commitments as traffic patterns change.</p>
-  <h3>Steps</h3>
-  <ol>
-    <li>Stabilize workloads for 2–4 weeks.</li>
-    <li>Buy conservative 1‑year Compute SPs.</li>
-    <li>Track coverage and utilization monthly.</li>
-    <li>Adjust as seasonality becomes clear.</li>
-  </ol>
-  <h3>Key figures</h3>
-  <ul>
-    <li>Initial coverage target: 30–50% of baseline.</li>
-  </ul>
+<h2>Use Savings Plans wisely</h2>
+<p class="answer">Start with no commitments until usage stabilizes, then buy 1‑year Compute Savings Plans at conservative baselines. Keep some on‑demand capacity for growth. Reassess quarterly and adjust commitments as traffic patterns change.</p>
+<h3>Steps</h3>
+<ol>
+<li>Stabilize workloads for 2–4 weeks.</li>
+<li>Buy conservative 1‑year Compute SPs.</li>
+<li>Track coverage and utilization monthly.</li>
+<li>Adjust as seasonality becomes clear.</li>
+</ol>
+<h3>Key figures</h3>
+<ul>
+<li>Initial coverage target: 30–50% of baseline.</li>
+</ul>
 </section>
 </body>
 </html>

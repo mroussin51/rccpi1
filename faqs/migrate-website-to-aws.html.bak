@@ -1,0 +1,198 @@
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://rccpi.net/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "FAQs",
+      "item": "https://rccpi.net/faqs/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Migration (Websites, Apps, Email, Files)",
+      "item": "https://rccpi.net/faqs/migrate-website-to-aws.html"
+    }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "Migrate a website to AWS with minimal downtime",
+  "description": "A staged cutover using temporary hostname validation and low DNS TTL.",
+  "totalTime": "PT4H",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "Export site",
+      "text": "Export files and database. Freeze edits."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Provision target",
+      "text": "Create EC2/Lightsail or ECS/EKS environment and harden it."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Import & validate",
+      "text": "Import data and test behind a temporary hostname."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Lower TTL & cut over",
+      "text": "Set DNS TTL to ~300s. Switch DNS during low traffic."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Monitor & rollback",
+      "text": "Watch logs/metrics; revert DNS if errors spike."
+    }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Do I need downtime?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "If you validate behind a temporary hostname and lower TTL, downtime is often a few minutes or less."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What if something breaks after cutover?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Roll back DNS to the old target and troubleshoot with logs and health checks, then retry the cutover."
+      }
+    }
+  ]
+}
+</script>
+
+
+<h1 id="primary-question">How do I migrate a website to AWS with near‑zero downtime?</h1>
+<p class="answer lead">Stage the target environment, import and validate the site behind a temporary hostname, lower DNS TTL to ~300 seconds, then switch records during a low‑traffic window. Monitor logs and performance; roll back if errors spike. Practice the steps ahead of time to make the cutover routine.</p>
+<div class="tldr card">
+  <h3>TL;DR</h3>
+  <ul class="bullets">
+    <li>Answer-first: see the summary above.</li>
+    <li>Full details and checklists follow below.</li>
+    <li>Book a consult if you want it done for you.</li>
+  </ul>
+</div>
+<p class="internal-links">Related: <a href="cloud-readiness.html">Cloud Readiness & Strategy</a> • <a href="web-wordpress-hosting.html">Web & App Hosting (WordPress & Static)</a> • <a href="aws-costs-and-finops.html">Cost & FinOps</a></p>
+
+
+
+<nav aria-label="Breadcrumb" class="breadcrumb">
+  <ol>
+    <li><a href="/index.html">Home</a></li>
+    <li><a href="/index.html">FAQs</a></li>
+    <li aria-current="page">Migration (Websites, Apps, Email, Files)</li>
+  </ol>
+</nav>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-V8P75P8DHE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-V8P75P8DHE');
+</script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Migration (Websites, Apps, Email, Files) — RCCPI</title>
+  <meta name="description" content="Practical steps to migrate to AWS with minimal downtime.">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="canonical" href="https://rccpi.net/faqs/migrate-website-to-aws.html">
+</head>
+<body>
+<header class="site-header">
+   <div class="container header-inner">
+    <a aria-current="page" aria-label="RCCPI Cloud Home" class="logo" href="index.html">
+     RCCPI LLC HOME
+    </a>
+    <nav aria-label="Primary" class="nav">
+     <a href="../services.html">Services</a>
+     <a href="../pricing.html">Pricing</a>
+     <a href="../email.html">Email</a>
+     <a href="../about.html">About</a>
+     <a class="btn ghost" href="../contact.html#booking">Book</a>
+    </nav>
+   </div>
+</header>
+<main class="site-main">
+  <section class="section">
+    <div class="container">
+
+<h1>Migration (Websites, Apps, Email, Files)</h1>
+<p class="subhead">Minimize downtime with staged cutovers and a tested rollback.</p>
+<div class="cards">
+  <article class="card">
+    <h3>Typical website move</h3>
+    <ul class='bullets'><li>Export site (files + DB), freeze edits</li><li>Stand up target (EC2, Lightsail, or ECS/EKS)</li><li>Import data; validate behind a temporary hostname</li><li>Switch DNS TTL to low (300s), then cut over</li><li>Monitor logs, errors, and performance; roll back if needed</li></ul>
+  </article>
+  <article class="card">
+    <h3>Email & files</h3>
+    <ul class='bullets'><li>Inventory mailboxes and aliases</li><li>Migrate IMAP with sync; verify SPF/DKIM/DMARC</li><li>Move files into S3 + lifecycle policies or EFS/FSx as needed</li></ul>
+  </article>
+</div>
+
+<div class="card" style="margin-top:16px">
+  <h3>Next step</h3>
+  <p>Want this implemented for you? Book a free 15‑minute consult and we’ll map the fastest, safest path for your business.</p>
+  <p><a class="btn" href="../contact.html#booking">Book a consult</a></p>
+</div>
+
+
+      <p class="center" style="margin-top:28px;"><a class="btn" href="index.html">← Back to FAQS Topics</a></p>
+    </div>
+  </section>
+</main>
+<footer class="site-footer">
+   <div class="container footer-grid">
+    <div>
+     <div class="logo">RCCPI Cloud</div>
+     <p>
+      Raleigh, NC<br/>
+      <a href="mailto:info@rccpi.net">info@rccpi.net</a>
+     </p>
+    </div>
+    <nav aria-label="Footer" class="footer-nav">
+     <a href="../services.html">Services</a>
+     <a href="../pricing.html">Pricing</a>
+     <a href="../email.html">Email</a>
+     <a href="../about.html">About</a>
+     <a href="../contact.html">Contact</a>
+     <a href="../privacy.html">Privacy</a>
+    </nav>
+    <div class="foot-legal">
+     <p>© RCCPI LLC • All rights reserved.</p>
+    </div>
+   </div>
+</footer>
+</body>
+</html>

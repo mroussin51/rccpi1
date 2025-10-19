@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-V8P75P8DHE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-V8P75P8DHE');
+</script>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Pricing — RCCPI
+  </title>
+  <meta content="RCCPI — AWS Cloud Consulting in Raleigh, NC" name="description"/>
+  <link href="style.css" rel="stylesheet"/>
+  <link href="https://rccpi.net/pricing.html" rel="canonical"/>
+  <meta content="Rosario Roussin" name="author"/>
+  <meta content="AWS, Cloud Consulting, Raleigh NC, Migrations, Cost Optimization, Security, DevOps" name="keywords"/>
+  <meta content="website" property="og:type"/>
+  <meta content="Pricing — RCCPI" property="og:title"/>
+  <meta content="RCCPI — AWS Cloud Consulting in Raleigh, NC" property="og:description"/>
+  <meta content="https://rccpi.net/pricing.html" property="og:url"/>
+  <meta content="https://rccpi.net/Images/Raleigh_Skyline.jpg" property="og:image"/>
+  <meta content="summary_large_image" name="twitter:card"/>
+  <meta content="Pricing — RCCPI" name="twitter:title"/>
+  <meta content="RCCPI — AWS Cloud Consulting in Raleigh, NC" name="twitter:description"/>
+  <meta content="https://rccpi.net/Images/Raleigh_Skyline.jpg" name="twitter:image"/>
+ </head>
+ <body>
+  <header class="site-header">
+   <div class="container header-inner">
+    <a aria-label="RCCPI Cloud Home" class="logo" href="index.html">
+     RCCPI LLC HOME
+    </a>
+    <nav aria-label="Primary" class="nav">
+     <a href="services.html">
+      Services
+     </a>
+     <a aria-current="page" href="pricing.html">
+      Pricing
+     </a>
+     <a href="email.html">
+      Email
+     </a>
+     <a href="about.html">
+      About
+     </a>
+     <a class="btn ghost" href="contact.html#booking">
+      Book
+     </a>
+    </nav>
+   </div>
+  </header>
+  <main class="site-main">
+   <section class="section">
+    <div class="container">
+     <h1>
+      Simple Hourly Pricing
+     </h1>
+     <p>
+      Change the numbers in this HTML to your real rates.
+     </p>
+     <div class="cards">
+      <article class="card">
+       <h3>
+        Standard consulting
+       </h3>
+       <p>
+        <strong>
+         $120/hour
+        </strong>
+       </p>
+       <p>
+        Architecture, migrations, cost, security, DevOps.
+       </p>
+      </article>
+      <article class="card">
+       <h3>
+        After‑hours / urgent
+       </h3>
+       <p>
+        <strong>
+         $180/hour
+        </strong>
+       </p>
+       <p>
+        Evenings, weekends, or incidents.
+       </p>
+      </article>
+      <article class="card">
+       <h3>
+        Email side service
+       </h3>
+       <p>
+        <strong>
+         $120/hour
+        </strong>
+       </p>
+       <p>
+        Workspace/M365 setup, migration, DNS &amp; auth.
+       </p>
+      </article>
+     </div>
+     <p>
+      <a class="btn cta" href="contact.html#booking">
+       Book a consult
+      </a>
+     </p>
+    </div>
+   </section>
+  </main>
+  <footer class="site-footer">
+   <div class="container footer-grid">
+    <div>
+     <div class="logo">
+      RCCPI Cloud
+     </div>
+     <p>
+      Raleigh, NC
+      <br/>
+      <a href="mailto:info@rccpi.net">
+       info@rccpi.net
+      </a>
+     </p>
+    </div>
+    <nav aria-label="Footer" class="footer-nav">
+     <a href="services.html">
+      Services
+     </a>
+     <a href="pricing.html">
+      Pricing
+     </a>
+     <a href="email.html">
+      Email
+     </a>
+     <a href="about.html">
+      About
+     </a>
+     <a href="contact.html">
+      Contact
+     </a>
+     <a href="privacy.html">
+      Privacy
+     </a>
+    </nav>
+    <div class="foot-legal">
+     <p>
+      © RCCPI LLC • All rights reserved.
+     </p>
+    </div>
+   </div>
+  </footer>
+ </body>
+</html>

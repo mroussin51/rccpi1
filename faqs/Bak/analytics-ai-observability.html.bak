@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Analytics, AI/ML & Observability — RCCPI</title>
+  <meta name="description" content="Collect metrics and logs, add analytics, and use AI safely.">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="canonical" href="https://rccpi.net/faqs/analytics-ai-observability.html">
+</head>
+<body>
+<header class="site-header">
+   <div class="container header-inner">
+    <a aria-current="page" aria-label="RCCPI Cloud Home" class="logo" href="index.html">
+     RCCPI LLC HOME
+    </a>
+    <nav aria-label="Primary" class="nav">
+     <a href="services.html">Services</a>
+     <a href="pricing.html">Pricing</a>
+     <a href="email.html">Email</a>
+     <a href="about.html">About</a>
+     <a class="btn ghost" href="contact.html#booking">Book</a>
+    </nav>
+   </div>
+</header>
+<main class="site-main">
+  <section class="section">
+    <div class="container">
+
+<h1>Analytics, AI/ML & Observability</h1>
+<p class="subhead">See what’s happening, learn from it, and act.</p>
+<div class="cards">
+  <article class="card">
+    <h3>Observability</h3>
+    <ul class='bullets'><li>Centralized logs/metrics/traces</li><li>Dashboards for latency, errors, and saturation</li><li>Alerts on SLO breaches</li></ul>
+  </article>
+  <article class="card">
+    <h3>Analytics & AI</h3>
+    <ul class='bullets'><li>ETL to S3/Lakehouse with query engine</li><li>Redshift/Athena for BI; scheduled reports</li><li>Responsible AI patterns and data governance</li></ul>
+  </article>
+</div>
+
+<div class="card" style="margin-top:16px">
+  <h3>Next step</h3>
+  <p>Want this implemented for you? Book a free 15‑minute consult and we’ll map the fastest, safest path for your business.</p>
+  <p><a class="btn" href="contact.html#booking">Book a consult</a></p>
+</div>
+
+
+      <p class="center" style="margin-top:28px;"><a class="btn" href="index.html">← Back to FAQS Topics</a></p>
+    </div>
+  </section>
+</main>
+<footer class="site-footer">
+   <div class="container footer-grid">
+    <div>
+     <div class="logo">RCCPI Cloud</div>
+     <p>
+      Raleigh, NC<br/>
+      <a href="mailto:info@rccpi.net">info@rccpi.net</a>
+     </p>
+    </div>
+    <nav aria-label="Footer" class="footer-nav">
+     <a href="services.html">Services</a>
+     <a href="pricing.html">Pricing</a>
+     <a href="email.html">Email</a>
+     <a href="about.html">About</a>
+     <a href="contact.html">Contact</a>
+     <a href="privacy.html">Privacy</a>
+    </nav>
+    <div class="foot-legal">
+     <p>© RCCPI LLC • All rights reserved.</p>
+    </div>
+   </div>
+</footer>
+</body>
+</html>

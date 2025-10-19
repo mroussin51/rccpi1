@@ -1,5 +1,4 @@
-
-<script type="application/ld+json">
+<html><head><base href="/"/><link href="/style.css" rel="stylesheet"/><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -25,112 +24,98 @@
   ]
 }
 </script>
-
-
-<h1 id="primary-question">What are the core principles of AWS architecture for small businesses?</h1>
+</head><body><h1 id="primary-question">What are the core principles of AWS architecture for small businesses?</h1>
 <p class="answer lead">Design for reliability, security, and cost control. Use multiple Availability Zones, managed databases, autoscaling or serverless, a CDN for static assets, encryption with KMS, least‑privilege IAM, and centralized logging and alerts. Keep components stateless and automate builds and deployments where possible.</p>
 <div class="tldr card">
-  <h3>TL;DR</h3>
-  <ul class="bullets">
-    <li>Answer-first: see the summary above.</li>
-    <li>Full details and checklists follow below.</li>
-    <li>Book a consult if you want it done for you.</li>
-  </ul>
+<h3>TL;DR</h3>
+<ul class="bullets">
+<li>Answer-first: see the summary above.</li>
+<li>Full details and checklists follow below.</li>
+<li>Book a consult if you want it done for you.</li>
+</ul>
 </div>
-<p class="internal-links">Related: <a href="cloud-readiness.html">Cloud Readiness & Strategy</a> • <a href="networking-performance.html">Networking & Performance</a> • <a href="reliability-backups-dr.html">Reliability, Backups & Disaster Recovery</a></p>
-
-
-
+<p class="internal-links">Related: <a href="cloud-readiness.html">Cloud Readiness &amp; Strategy</a> • <a href="networking-performance.html">Networking &amp; Performance</a> • <a href="reliability-backups-dr.html">Reliability, Backups &amp; Disaster Recovery</a></p>
 <nav aria-label="Breadcrumb" class="breadcrumb">
-  <ol>
-    <li><a href="/index.html">Home</a></li>
-    <li><a href="/index.html">FAQs</a></li>
-    <li aria-current="page">Architecture & Design</li>
-  </ol>
+<ol>
+<li><a href="/index.html">Home</a></li>
+<li><a href="/index.html">FAQs</a></li>
+<li aria-current="page">Architecture &amp; Design</li>
+</ol>
 </nav>
-
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-V8P75P8DHE"></script>
+
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-V8P75P8DHE"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-V8P75P8DHE');
 </script>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Architecture & Design — RCCPI</title>
-  <meta name="description" content="Core patterns for reliable, secure, cost-effective architecture.">
-  <link rel="stylesheet" href="../style.css">
-  <link rel="canonical" href="https://rccpi.net/faqs/aws-architecture-basics.html">
-</head>
-<body>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Architecture &amp; Design — RCCPI</title>
+<meta content="Core patterns for reliable, secure, cost-effective architecture." name="description"/>
+<link href="../style.css" rel="stylesheet"/>
+<link href="https://rccpi.net/faqs/aws-architecture-basics.html" rel="canonical"/>
 <header class="site-header">
-   <div class="container header-inner">
-    <a aria-current="page" aria-label="RCCPI Cloud Home" class="logo" href="index.html">
+<div class="container header-inner">
+<a aria-current="page" aria-label="RCCPI Cloud Home" class="logo" href="index.html">
      RCCPI LLC HOME
     </a>
-    <nav aria-label="Primary" class="nav">
-     <a href="services.html">Services</a>
-     <a href="pricing.html">Pricing</a>
-     <a href="email.html">Email</a>
-     <a href="about.html">About</a>
-     <a class="btn ghost" href="contact.html#booking">Book</a>
-    </nav>
-   </div>
+<nav aria-label="Primary" class="nav">
+<a href="services.html">Services</a>
+<a href="pricing.html">Pricing</a>
+<a href="email.html">Email</a>
+<a href="about.html">About</a>
+<a class="btn ghost" href="contact.html#booking">Book</a>
+</nav>
+</div>
 </header>
 <main class="site-main">
-  <section class="section">
-    <div class="container">
-
-<h1>Architecture & Design</h1>
+<section class="section">
+<div class="container">
+<h1>Architecture &amp; Design</h1>
 <p class="subhead">Reliable, secure, and cost‑aware patterns from day one.</p>
 <div class="cards">
-  <article class="card">
-    <h3>Foundational patterns</h3>
-    <ul class='bullets'><li>VPC with public and private subnets across ≥2 AZs</li><li>Managed databases (RDS/Aurora) with backups</li><li>Stateless app tier behind an Application Load Balancer</li><li>Autoscaling or serverless where practical</li><li>CloudFront CDN + S3 for static assets</li><li>Centralized logging, metrics, and alarms</li></ul>
-  </article>
-  <article class="card">
-    <h3>Security by default</h3>
-    <ul class='bullets'><li>MFA on all users; least‑privilege IAM roles</li><li>KMS‑backed encryption at rest and in transit</li><li>WAF + Shield, Security Groups, and subnet ACLs</li><li>Backup policies with tested restores</li></ul>
-  </article>
+<article class="card">
+<h3>Foundational patterns</h3>
+<ul class="bullets"><li>VPC with public and private subnets across ≥2 AZs</li><li>Managed databases (RDS/Aurora) with backups</li><li>Stateless app tier behind an Application Load Balancer</li><li>Autoscaling or serverless where practical</li><li>CloudFront CDN + S3 for static assets</li><li>Centralized logging, metrics, and alarms</li></ul>
+</article>
+<article class="card">
+<h3>Security by default</h3>
+<ul class="bullets"><li>MFA on all users; least‑privilege IAM roles</li><li>KMS‑backed encryption at rest and in transit</li><li>WAF + Shield, Security Groups, and subnet ACLs</li><li>Backup policies with tested restores</li></ul>
+</article>
 </div>
-
 <div class="card" style="margin-top:16px">
-  <h3>Next step</h3>
-  <p>Want this implemented for you? Book a free 15‑minute consult and we’ll map the fastest, safest path for your business.</p>
-  <p><a class="btn" href="contact.html#booking">Book a consult</a></p>
+<h3>Next step</h3>
+<p>Want this implemented for you? Book a free 15‑minute consult and we’ll map the fastest, safest path for your business.</p>
+<p><a class="btn" href="contact.html#booking">Book a consult</a></p>
 </div>
-
-
-      <p class="center" style="margin-top:28px;"><a class="btn" href="index.html">← Back to FAQS Topics</a></p>
-    </div>
-  </section>
+<p class="center" style="margin-top:28px;"><a class="btn" href="index.html">← Back to FAQS Topics</a></p>
+</div>
+</section>
 </main>
 <footer class="site-footer">
-   <div class="container footer-grid">
-    <div>
-     <div class="logo">RCCPI Cloud</div>
-     <p>
+<div class="container footer-grid">
+<div>
+<div class="logo">RCCPI Cloud</div>
+<p>
       Raleigh, NC<br/>
-      <a href="mailto:info@rccpi.net">info@rccpi.net</a>
-     </p>
-    </div>
-    <nav aria-label="Footer" class="footer-nav">
-     <a href="services.html">Services</a>
-     <a href="pricing.html">Pricing</a>
-     <a href="email.html">Email</a>
-     <a href="about.html">About</a>
-     <a href="contact.html">Contact</a>
-     <a href="privacy.html">Privacy</a>
-    </nav>
-    <div class="foot-legal">
-     <p>© RCCPI LLC • All rights reserved.</p>
-    </div>
-   </div>
+<a href="mailto:info@rccpi.net">info@rccpi.net</a>
+</p>
+</div>
+<nav aria-label="Footer" class="footer-nav">
+<a href="services.html">Services</a>
+<a href="pricing.html">Pricing</a>
+<a href="email.html">Email</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+<a href="privacy.html">Privacy</a>
+</nav>
+<div class="foot-legal">
+<p>© RCCPI LLC • All rights reserved.</p>
+</div>
+</div>
 </footer>
-</body>
-</html>
+</body></html>

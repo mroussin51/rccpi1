@@ -1,12 +1,12 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>AWS Architecture Basics for Small Teams | rccpi.net</title>
-  <meta name="description" content="Reference patterns for a simple, reliable AWS foundation.">
-  <link rel="canonical" href="https://rccpi.net/aws-architecture-basics.html">
-  <style>
+<head><base href="/"/><link href="/style.css" rel="stylesheet"/>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>AWS Architecture Basics for Small Teams | rccpi.net</title>
+<meta content="Reference patterns for a simple, reliable AWS foundation." name="description"/>
+<link href="https://rccpi.net/aws-architecture-basics.html" rel="canonical"/>
+<style>
     body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu, Cantarell, 'Helvetica Neue', Arial, sans-serif;line-height:1.6;padding:2rem;max-width:880px;margin:auto}
     h1{font-size:1.8rem;margin-bottom:0.5rem}
     h2{margin-top:2rem}
@@ -16,7 +16,7 @@
     .toc ul{list-style: none; padding-left: 0}
     .toc a{text-decoration:none}
   </style>
-  <script type="application/ld+json">
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Article",
@@ -121,60 +121,60 @@
 </head>
 <body>
 <header>
-  <h1>AWS Architecture Basics for Small Teams</h1>
-  <p class="meta">Author: Rosario Roussin · Last updated: 2025-09-28</p>
+<h1>AWS Architecture Basics for Small Teams</h1>
+<p class="meta">Author: Rosario Roussin · Last updated: 2025-09-28</p>
 </header>
 <section class="toc">
-  <h2>On this page</h2>
-  <ul>
-    <li><a href="#well-architected-starter">A well‑architected starter for a simple web app</a></li>    <li><a href="#compute-choices">Pick the right compute: EC2, Lightsail, or Beanstalk</a></li>    <li><a href="#environments">Separate dev, test, and prod sanely</a></li>  </ul>
+<h2>On this page</h2>
+<ul>
+<li><a href="#well-architected-starter">A well‑architected starter for a simple web app</a></li> <li><a href="#compute-choices">Pick the right compute: EC2, Lightsail, or Beanstalk</a></li> <li><a href="#environments">Separate dev, test, and prod sanely</a></li> </ul>
 </section>
 <section id="well-architected-starter">
-  <h2>A well‑architected starter for a simple web app</h2>
-  <p class="answer">Start with one VPC, public subnets for ALB and NAT, private subnets for app and database. Use an ALB to route HTTPS to containers or EC2. Store static assets on S3 with CloudFront. Centralize logs and enable budget alarms to prevent cost surprises.</p>
-  <h3>Steps</h3>
-  <ol>
-    <li>Create VPC with 2–3 AZs; split public/private subnets.</li>
-    <li>Place ALB + NAT in public; app + DB in private.</li>
-    <li>Use ACM for TLS; terminate HTTPS at ALB.</li>
-    <li>Serve static assets from S3; cache via CloudFront.</li>
-    <li>Ship logs/metrics to a central destination; set budgets.</li>
-  </ol>
-  <h3>Key figures</h3>
-  <ul>
-    <li>AZ count: 2 minimum, 3 preferred.</li>
-    <li>Cache hit target: 60–80% for static assets.</li>
-  </ul>
+<h2>A well‑architected starter for a simple web app</h2>
+<p class="answer">Start with one VPC, public subnets for ALB and NAT, private subnets for app and database. Use an ALB to route HTTPS to containers or EC2. Store static assets on S3 with CloudFront. Centralize logs and enable budget alarms to prevent cost surprises.</p>
+<h3>Steps</h3>
+<ol>
+<li>Create VPC with 2–3 AZs; split public/private subnets.</li>
+<li>Place ALB + NAT in public; app + DB in private.</li>
+<li>Use ACM for TLS; terminate HTTPS at ALB.</li>
+<li>Serve static assets from S3; cache via CloudFront.</li>
+<li>Ship logs/metrics to a central destination; set budgets.</li>
+</ol>
+<h3>Key figures</h3>
+<ul>
+<li>AZ count: 2 minimum, 3 preferred.</li>
+<li>Cache hit target: 60–80% for static assets.</li>
+</ul>
 </section>
 <section id="compute-choices">
-  <h2>Pick the right compute: EC2, Lightsail, or Beanstalk</h2>
-  <p class="answer">Choose Lightsail for the simplest single‑instance sites, EC2 for full control and networking, and Elastic Beanstalk for managed deploys with minimal ops. If containers are planned, prefer ECS on Fargate for zero server management and predictable scaling.</p>
-  <h3>Steps</h3>
-  <ol>
-    <li>Map constraints: control, scaling, ops time.</li>
-    <li>If minimal ops: Lightsail/Beanstalk; need control: EC2.</li>
-    <li>For containers: ECS on Fargate to avoid VM patching.</li>
-    <li>Add ALB + ACM for clean HTTPS and blue/green deploys.</li>
-  </ol>
-  <h3>Key figures</h3>
-  <ul>
-    <li>Operational effort: Lightsail < Beanstalk < EC2.</li>
-  </ul>
+<h2>Pick the right compute: EC2, Lightsail, or Beanstalk</h2>
+<p class="answer">Choose Lightsail for the simplest single‑instance sites, EC2 for full control and networking, and Elastic Beanstalk for managed deploys with minimal ops. If containers are planned, prefer ECS on Fargate for zero server management and predictable scaling.</p>
+<h3>Steps</h3>
+<ol>
+<li>Map constraints: control, scaling, ops time.</li>
+<li>If minimal ops: Lightsail/Beanstalk; need control: EC2.</li>
+<li>For containers: ECS on Fargate to avoid VM patching.</li>
+<li>Add ALB + ACM for clean HTTPS and blue/green deploys.</li>
+</ol>
+<h3>Key figures</h3>
+<ul>
+<li>Operational effort: Lightsail &lt; Beanstalk &lt; EC2.</li>
+</ul>
 </section>
 <section id="environments">
-  <h2>Separate dev, test, and prod sanely</h2>
-  <p class="answer">Use identical templates with smaller sizes for non‑prod. Isolate accounts or VPCs, and require role‑based access with MFA. Automate deployments from main branch to dev/test, and gated releases to prod with approvals and change logs for traceability.</p>
-  <h3>Steps</h3>
-  <ol>
-    <li>Use IaC to define all environments consistently.</li>
-    <li>Apply least‑privilege roles; enforce MFA.</li>
-    <li>Automate deploys; require approvals for prod.</li>
-    <li>Mirror monitoring and alerts across envs.</li>
-  </ol>
-  <h3>Key figures</h3>
-  <ul>
-    <li>Drift checks: weekly in non‑prod; daily in prod.</li>
-  </ul>
+<h2>Separate dev, test, and prod sanely</h2>
+<p class="answer">Use identical templates with smaller sizes for non‑prod. Isolate accounts or VPCs, and require role‑based access with MFA. Automate deployments from main branch to dev/test, and gated releases to prod with approvals and change logs for traceability.</p>
+<h3>Steps</h3>
+<ol>
+<li>Use IaC to define all environments consistently.</li>
+<li>Apply least‑privilege roles; enforce MFA.</li>
+<li>Automate deploys; require approvals for prod.</li>
+<li>Mirror monitoring and alerts across envs.</li>
+</ol>
+<h3>Key figures</h3>
+<ul>
+<li>Drift checks: weekly in non‑prod; daily in prod.</li>
+</ul>
 </section>
 </body>
 </html>

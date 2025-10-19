@@ -1,12 +1,12 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Containers: ECS, EKS, or EC2? | rccpi.net</title>
-  <meta name="description" content="Right‑size container orchestration for small teams.">
-  <link rel="canonical" href="https://rccpi.net/containers-ecs-eks.html">
-  <style>
+<head><base href="/"/><link href="/style.css" rel="stylesheet"/>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>Containers: ECS, EKS, or EC2? | rccpi.net</title>
+<meta content="Right‑size container orchestration for small teams." name="description"/>
+<link href="https://rccpi.net/containers-ecs-eks.html" rel="canonical"/>
+<style>
     body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu, Cantarell, 'Helvetica Neue', Arial, sans-serif;line-height:1.6;padding:2rem;max-width:880px;margin:auto}
     h1{font-size:1.8rem;margin-bottom:0.5rem}
     h2{margin-top:2rem}
@@ -16,7 +16,7 @@
     .toc ul{list-style: none; padding-left: 0}
     .toc a{text-decoration:none}
   </style>
-  <script type="application/ld+json">
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Article",
@@ -116,46 +116,46 @@
 </head>
 <body>
 <header>
-  <h1>Containers: ECS, EKS, or EC2?</h1>
-  <p class="meta">Author: Rosario Roussin · Last updated: 2025-09-28</p>
+<h1>Containers: ECS, EKS, or EC2?</h1>
+<p class="meta">Author: Rosario Roussin · Last updated: 2025-09-28</p>
 </header>
 <section class="toc">
-  <h2>On this page</h2>
-  <ul>
-    <li><a href="#do-you-need-k8s">Do you even need Kubernetes?</a></li>    <li><a href="#deploy-containers">Deploy a container with CI/CD</a></li>    <li><a href="#ops-insight">Logging and monitoring without bloat</a></li>  </ul>
+<h2>On this page</h2>
+<ul>
+<li><a href="#do-you-need-k8s">Do you even need Kubernetes?</a></li> <li><a href="#deploy-containers">Deploy a container with CI/CD</a></li> <li><a href="#ops-insight">Logging and monitoring without bloat</a></li> </ul>
 </section>
 <section id="do-you-need-k8s">
-  <h2>Do you even need Kubernetes?</h2>
-  <p class="answer">Most small teams don’t. Use ECS on Fargate for low‑ops container runs and scale later if needed. Kubernetes makes sense when you have many services, strong in‑house ops skills, or portability needs across clouds.</p>
-  <h3>Steps</h3>
-  <ol>
-    <li>Count services and scaling requirements.</li>
-    <li>Prefer ECS Fargate for simple workloads.</li>
-    <li>Adopt EKS only with clear multi‑service needs.</li>
-    <li>Automate CI/CD and logging regardless of choice.</li>
-  </ol>
+<h2>Do you even need Kubernetes?</h2>
+<p class="answer">Most small teams don’t. Use ECS on Fargate for low‑ops container runs and scale later if needed. Kubernetes makes sense when you have many services, strong in‑house ops skills, or portability needs across clouds.</p>
+<h3>Steps</h3>
+<ol>
+<li>Count services and scaling requirements.</li>
+<li>Prefer ECS Fargate for simple workloads.</li>
+<li>Adopt EKS only with clear multi‑service needs.</li>
+<li>Automate CI/CD and logging regardless of choice.</li>
+</ol>
 </section>
 <section id="deploy-containers">
-  <h2>Deploy a container with CI/CD</h2>
-  <p class="answer">Build and scan images, push to a registry, and deploy via pipeline to ECS/EKS. Use blue/green or canary strategies behind an ALB. Roll back quickly by pinning to the last known‑good image tag.</p>
-  <h3>Steps</h3>
-  <ol>
-    <li>Build image; run security scans.</li>
-    <li>Push to registry; tag with git SHA.</li>
-    <li>Deploy with pipeline to ECS/EKS service.</li>
-    <li>Blue/green via ALB; test; then shift traffic.</li>
-  </ol>
+<h2>Deploy a container with CI/CD</h2>
+<p class="answer">Build and scan images, push to a registry, and deploy via pipeline to ECS/EKS. Use blue/green or canary strategies behind an ALB. Roll back quickly by pinning to the last known‑good image tag.</p>
+<h3>Steps</h3>
+<ol>
+<li>Build image; run security scans.</li>
+<li>Push to registry; tag with git SHA.</li>
+<li>Deploy with pipeline to ECS/EKS service.</li>
+<li>Blue/green via ALB; test; then shift traffic.</li>
+</ol>
 </section>
 <section id="ops-insight">
-  <h2>Logging and monitoring without bloat</h2>
-  <p class="answer">Ship stdout/stderr to centralized logs, emit metrics for latency and errors, and set SLOs that trigger alerts only when users are impacted. Keep dashboards simple: availability, latency, error rate, and cost.</p>
-  <h3>Steps</h3>
-  <ol>
-    <li>Centralize logs; retain per policy.</li>
-    <li>Expose metrics and define SLOs.</li>
-    <li>Alert on user‑visible issues, not noise.</li>
-    <li>Review dashboards weekly with owners.</li>
-  </ol>
+<h2>Logging and monitoring without bloat</h2>
+<p class="answer">Ship stdout/stderr to centralized logs, emit metrics for latency and errors, and set SLOs that trigger alerts only when users are impacted. Keep dashboards simple: availability, latency, error rate, and cost.</p>
+<h3>Steps</h3>
+<ol>
+<li>Centralize logs; retain per policy.</li>
+<li>Expose metrics and define SLOs.</li>
+<li>Alert on user‑visible issues, not noise.</li>
+<li>Review dashboards weekly with owners.</li>
+</ol>
 </section>
 </body>
 </html>

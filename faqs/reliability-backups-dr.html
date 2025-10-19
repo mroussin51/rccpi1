@@ -1,5 +1,4 @@
-
-<script type="application/ld+json">
+<html><head><base href="/"/><link href="/style.css" rel="stylesheet"/><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -25,7 +24,6 @@
   ]
 }
 </script>
-
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -50,113 +48,98 @@
   ]
 }
 </script>
-
-
-<h1 id="primary-question">What makes an AWS workload reliable and recoverable?</h1>
+</head><body><h1 id="primary-question">What makes an AWS workload reliable and recoverable?</h1>
 <p class="answer lead">Spread components across multiple AZs, monitor health and capacity, and back up data with retention. Define RTO/RPO, copy backups off‑region, and practice restores. Load test before big events and automate failover where supported to keep recovery quick and predictable.</p>
 <div class="tldr card">
-  <h3>TL;DR</h3>
-  <ul class="bullets">
-    <li>Answer-first: see the summary above.</li>
-    <li>Full details and checklists follow below.</li>
-    <li>Book a consult if you want it done for you.</li>
-  </ul>
+<h3>TL;DR</h3>
+<ul class="bullets">
+<li>Answer-first: see the summary above.</li>
+<li>Full details and checklists follow below.</li>
+<li>Book a consult if you want it done for you.</li>
+</ul>
 </div>
-<p class="internal-links">Related: <a href="data-storage-databases.html">Data, Storage & Databases</a> • <a href="devops-ci-cd-iac.html">DevOps, CI/CD & Infrastructure as Code</a> • <a href="aws-architecture-basics.html">Architecture & Design</a></p>
-
-
-
+<p class="internal-links">Related: <a href="data-storage-databases.html">Data, Storage &amp; Databases</a> • <a href="devops-ci-cd-iac.html">DevOps, CI/CD &amp; Infrastructure as Code</a> • <a href="aws-architecture-basics.html">Architecture &amp; Design</a></p>
 <nav aria-label="Breadcrumb" class="breadcrumb">
-  <ol>
-    <li><a href="/index.html">Home</a></li>
-    <li><a href="/index.html">FAQs</a></li>
-    <li aria-current="page">Reliability, Backups & Disaster Recovery</li>
-  </ol>
+<ol>
+<li><a href="/index.html">Home</a></li>
+<li><a href="/index.html">FAQs</a></li>
+<li aria-current="page">Reliability, Backups &amp; Disaster Recovery</li>
+</ol>
 </nav>
-
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-V8P75P8DHE"></script>
+
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-V8P75P8DHE"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-V8P75P8DHE');
 </script>
-
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Reliability, Backups & Disaster Recovery — RCCPI</title>
-  <meta name="description" content="Design for uptime, RPO/RTO, backups, and DR drills.">
-  <link rel="stylesheet" href="../style.css">
-  <link rel="canonical" href="https://rccpi.net/faqs/reliability-backups-dr.html">
-</head>
-<body>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Reliability, Backups &amp; Disaster Recovery — RCCPI</title>
+<meta content="Design for uptime, RPO/RTO, backups, and DR drills." name="description"/>
+<link href="../style.css" rel="stylesheet"/>
+<link href="https://rccpi.net/faqs/reliability-backups-dr.html" rel="canonical"/>
 <header class="site-header">
-   <div class="container header-inner">
-    <a aria-current="page" aria-label="RCCPI Cloud Home" class="logo" href="index.html">
+<div class="container header-inner">
+<a aria-current="page" aria-label="RCCPI Cloud Home" class="logo" href="index.html">
      RCCPI LLC HOME
     </a>
-    <nav aria-label="Primary" class="nav">
-     <a href="../services.html">Services</a>
-     <a href="../pricing.html">Pricing</a>
-     <a href="../email.html">Email</a>
-     <a href="../about.html">About</a>
-     <a class="btn ghost" href="../contact.html#booking">Book</a>
-    </nav>
-   </div>
+<nav aria-label="Primary" class="nav">
+<a href="../services.html">Services</a>
+<a href="../pricing.html">Pricing</a>
+<a href="../email.html">Email</a>
+<a href="../about.html">About</a>
+<a class="btn ghost" href="../contact.html#booking">Book</a>
+</nav>
+</div>
 </header>
 <main class="site-main">
-  <section class="section">
-    <div class="container">
-
-<h1>Reliability, Backups & Disaster Recovery</h1>
+<section class="section">
+<div class="container">
+<h1>Reliability, Backups &amp; Disaster Recovery</h1>
 <p class="subhead">Design for failure; practice recovery.</p>
 <div class="cards">
-  <article class="card">
-    <h3>Availability</h3>
-    <ul class='bullets'><li>Multi‑AZ architecture for critical tiers</li><li>Health probes and automatic failover</li><li>Capacity planning and load testing</li></ul>
-  </article>
-  <article class="card">
-    <h3>Backups & DR</h3>
-    <ul class='bullets'><li>Nightly backups + weekly fulls; retention policy</li><li>Offsite + cross‑Region copies</li><li>Quarterly restore drills; documented RTO/RPO</li></ul>
-  </article>
+<article class="card">
+<h3>Availability</h3>
+<ul class="bullets"><li>Multi‑AZ architecture for critical tiers</li><li>Health probes and automatic failover</li><li>Capacity planning and load testing</li></ul>
+</article>
+<article class="card">
+<h3>Backups &amp; DR</h3>
+<ul class="bullets"><li>Nightly backups + weekly fulls; retention policy</li><li>Offsite + cross‑Region copies</li><li>Quarterly restore drills; documented RTO/RPO</li></ul>
+</article>
 </div>
-
 <div class="card" style="margin-top:16px">
-  <h3>Next step</h3>
-  <p>Want this implemented for you? Book a free 15‑minute consult and we’ll map the fastest, safest path for your business.</p>
-  <p><a class="btn" href="../contact.html#booking">Book a consult</a></p>
+<h3>Next step</h3>
+<p>Want this implemented for you? Book a free 15‑minute consult and we’ll map the fastest, safest path for your business.</p>
+<p><a class="btn" href="../contact.html#booking">Book a consult</a></p>
 </div>
-
-
-      <p class="center" style="margin-top:28px;"><a class="btn" href="index.html">← Back to FAQS Topics</a></p>
-    </div>
-  </section>
+<p class="center" style="margin-top:28px;"><a class="btn" href="index.html">← Back to FAQS Topics</a></p>
+</div>
+</section>
 </main>
 <footer class="site-footer">
-   <div class="container footer-grid">
-    <div>
-     <div class="logo">RCCPI Cloud</div>
-     <p>
+<div class="container footer-grid">
+<div>
+<div class="logo">RCCPI Cloud</div>
+<p>
       Raleigh, NC<br/>
-      <a href="mailto:info@rccpi.net">info@rccpi.net</a>
-     </p>
-    </div>
-    <nav aria-label="Footer" class="footer-nav">
-     <a href="../services.html">Services</a>
-     <a href="../pricing.html">Pricing</a>
-     <a href="../email.html">Email</a>
-     <a href="../about.html">About</a>
-     <a href="../contact.html">Contact</a>
-     <a href="../privacy.html">Privacy</a>
-    </nav>
-    <div class="foot-legal">
-     <p>© RCCPI LLC • All rights reserved.</p>
-    </div>
-   </div>
+<a href="mailto:info@rccpi.net">info@rccpi.net</a>
+</p>
+</div>
+<nav aria-label="Footer" class="footer-nav">
+<a href="../services.html">Services</a>
+<a href="../pricing.html">Pricing</a>
+<a href="../email.html">Email</a>
+<a href="../about.html">About</a>
+<a href="../contact.html">Contact</a>
+<a href="../privacy.html">Privacy</a>
+</nav>
+<div class="foot-legal">
+<p>© RCCPI LLC • All rights reserved.</p>
+</div>
+</div>
 </footer>
-</body>
-</html>
+</body></html>

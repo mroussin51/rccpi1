@@ -1,5 +1,4 @@
-
-<script type="application/ld+json">
+<html><head><base href="/"/><link href="/style.css" rel="stylesheet"/><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -25,7 +24,6 @@
   ]
 }
 </script>
-
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -50,112 +48,98 @@
   ]
 }
 </script>
-
-
-<h1 id="primary-question">How should I design AWS networking for performance and safety?</h1>
+</head><body><h1 id="primary-question">How should I design AWS networking for performance and safety?</h1>
 <p class="answer lead">Plan VPC CIDR ranges, split public/private subnets across AZs, use NAT gateways for outbound, and VPC endpoints for private access to AWS services. Keep routing simple, secure with security groups, and accelerate delivery with CloudFront. Measure latency and errors to find hotspots.</p>
 <div class="tldr card">
-  <h3>TL;DR</h3>
-  <ul class="bullets">
-    <li>Answer-first: see the summary above.</li>
-    <li>Full details and checklists follow below.</li>
-    <li>Book a consult if you want it done for you.</li>
-  </ul>
+<h3>TL;DR</h3>
+<ul class="bullets">
+<li>Answer-first: see the summary above.</li>
+<li>Full details and checklists follow below.</li>
+<li>Book a consult if you want it done for you.</li>
+</ul>
 </div>
-<p class="internal-links">Related: <a href="aws-architecture-basics.html">Architecture & Design</a> • <a href="data-storage-databases.html">Data, Storage & Databases</a> • <a href="containers-ecs-eks.html">Containers & Kubernetes</a></p>
-
-
-
+<p class="internal-links">Related: <a href="aws-architecture-basics.html">Architecture &amp; Design</a> • <a href="data-storage-databases.html">Data, Storage &amp; Databases</a> • <a href="containers-ecs-eks.html">Containers &amp; Kubernetes</a></p>
 <nav aria-label="Breadcrumb" class="breadcrumb">
-  <ol>
-    <li><a href="/index.html">Home</a></li>
-    <li><a href="/index.html">FAQs</a></li>
-    <li aria-current="page">Networking & Performance</li>
-  </ol>
+<ol>
+<li><a href="/index.html">Home</a></li>
+<li><a href="/index.html">FAQs</a></li>
+<li aria-current="page">Networking &amp; Performance</li>
+</ol>
 </nav>
-
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-V8P75P8DHE"></script>
+
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-V8P75P8DHE"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-V8P75P8DHE');
 </script>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Networking & Performance — RCCPI</title>
-  <meta name="description" content="VPCs, subnets, routing, peering, and performance tuning.">
-  <link rel="stylesheet" href="../style.css">
-  <link rel="canonical" href="https://rccpi.net/faqs/networking-performance.html">
-</head>
-<body>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Networking &amp; Performance — RCCPI</title>
+<meta content="VPCs, subnets, routing, peering, and performance tuning." name="description"/>
+<link href="../style.css" rel="stylesheet"/>
+<link href="https://rccpi.net/faqs/networking-performance.html" rel="canonical"/>
 <header class="site-header">
-   <div class="container header-inner">
-    <a aria-current="page" aria-label="RCCPI Cloud Home" class="logo" href="index.html">
+<div class="container header-inner">
+<a aria-current="page" aria-label="RCCPI Cloud Home" class="logo" href="index.html">
      RCCPI LLC HOME
     </a>
-    <nav aria-label="Primary" class="nav">
-     <a href="../services.html">Services</a>
-     <a href="../pricing.html">Pricing</a>
-     <a href="../email.html">Email</a>
-     <a href="../about.html">About</a>
-     <a class="btn ghost" href="../contact.html#booking">Book</a>
-    </nav>
-   </div>
+<nav aria-label="Primary" class="nav">
+<a href="../services.html">Services</a>
+<a href="../pricing.html">Pricing</a>
+<a href="../email.html">Email</a>
+<a href="../about.html">About</a>
+<a class="btn ghost" href="../contact.html#booking">Book</a>
+</nav>
+</div>
 </header>
 <main class="site-main">
-  <section class="section">
-    <div class="container">
-
-<h1>Networking & Performance</h1>
+<section class="section">
+<div class="container">
+<h1>Networking &amp; Performance</h1>
 <p class="subhead">Fast, resilient networking that scales.</p>
 <div class="cards">
-  <article class="card">
-    <h3>Networking patterns</h3>
-    <ul class='bullets'><li>VPC CIDR planning; public/private subnets per AZ</li><li>NAT gateways per AZ; route tables kept simple</li><li>VPC endpoints for S3/DynamoDB to avoid public egress</li><li>PrivateLink/peering for partner connectivity</li></ul>
-  </article>
-  <article class="card">
-    <h3>Performance boosts</h3>
-    <ul class='bullets'><li>ALB + autoscaling for bursty traffic</li><li>CloudFront CDN with cached static assets</li><li>RDS read replicas and query tuning</li><li>Observability to locate hotspots</li></ul>
-  </article>
+<article class="card">
+<h3>Networking patterns</h3>
+<ul class="bullets"><li>VPC CIDR planning; public/private subnets per AZ</li><li>NAT gateways per AZ; route tables kept simple</li><li>VPC endpoints for S3/DynamoDB to avoid public egress</li><li>PrivateLink/peering for partner connectivity</li></ul>
+</article>
+<article class="card">
+<h3>Performance boosts</h3>
+<ul class="bullets"><li>ALB + autoscaling for bursty traffic</li><li>CloudFront CDN with cached static assets</li><li>RDS read replicas and query tuning</li><li>Observability to locate hotspots</li></ul>
+</article>
 </div>
-
 <div class="card" style="margin-top:16px">
-  <h3>Next step</h3>
-  <p>Want this implemented for you? Book a free 15‑minute consult and we’ll map the fastest, safest path for your business.</p>
-  <p><a class="btn" href="../contact.html#booking">Book a consult</a></p>
+<h3>Next step</h3>
+<p>Want this implemented for you? Book a free 15‑minute consult and we’ll map the fastest, safest path for your business.</p>
+<p><a class="btn" href="../contact.html#booking">Book a consult</a></p>
 </div>
-
-
-      <p class="center" style="margin-top:28px;"><a class="btn" href="index.html">← Back to FAQS Topics</a></p>
-    </div>
-  </section>
+<p class="center" style="margin-top:28px;"><a class="btn" href="index.html">← Back to FAQS Topics</a></p>
+</div>
+</section>
 </main>
 <footer class="site-footer">
-   <div class="container footer-grid">
-    <div>
-     <div class="logo">RCCPI Cloud</div>
-     <p>
+<div class="container footer-grid">
+<div>
+<div class="logo">RCCPI Cloud</div>
+<p>
       Raleigh, NC<br/>
-      <a href="mailto:info@rccpi.net">info@rccpi.net</a>
-     </p>
-    </div>
-    <nav aria-label="Footer" class="footer-nav">
-     <a href="../services.html">Services</a>
-     <a href="../pricing.html">Pricing</a>
-     <a href="../email.html">Email</a>
-     <a href="../about.html">About</a>
-     <a href="../contact.html">Contact</a>
-     <a href="../privacy.html">Privacy</a>
-    </nav>
-    <div class="foot-legal">
-     <p>© RCCPI LLC • All rights reserved.</p>
-    </div>
-   </div>
+<a href="mailto:info@rccpi.net">info@rccpi.net</a>
+</p>
+</div>
+<nav aria-label="Footer" class="footer-nav">
+<a href="../services.html">Services</a>
+<a href="../pricing.html">Pricing</a>
+<a href="../email.html">Email</a>
+<a href="../about.html">About</a>
+<a href="../contact.html">Contact</a>
+<a href="../privacy.html">Privacy</a>
+</nav>
+<div class="foot-legal">
+<p>© RCCPI LLC • All rights reserved.</p>
+</div>
+</div>
 </footer>
-</body>
-</html>
+</body></html>

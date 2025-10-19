@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   About — RCCPI
+  </title>
+  <meta content="RCCPI — AWS Cloud Consulting in Raleigh, NC" name="description"/>
+  <link href="style.css" rel="stylesheet"/>
+  <link href="https://rccpi.net/about.html" rel="canonical"/>
+  <meta content="Rosario Roussin" name="author"/>
+  <meta content="AWS, Cloud Consulting, Raleigh NC, Migrations, Cost Optimization, Security, DevOps" name="keywords"/>
+  <meta content="website" property="og:type"/>
+  <meta content="About — RCCPI" property="og:title"/>
+  <meta content="RCCPI — AWS Cloud Consulting in Raleigh, NC" property="og:description"/>
+  <meta content="https://rccpi.net/about.html" property="og:url"/>
+  <meta content="https://rccpi.net/Images/Raleigh_Skyline.jpg" property="og:image"/>
+  <meta content="summary_large_image" name="twitter:card"/>
+  <meta content="About — RCCPI" name="twitter:title"/>
+  <meta content="RCCPI — AWS Cloud Consulting in Raleigh, NC" name="twitter:description"/>
+  <meta content="https://rccpi.net/Images/Raleigh_Skyline.jpg" name="twitter:image"/>
+ </head>
+ <body>
+  <header class="site-header">
+   <div class="container header-inner">
+    <a aria-label="RCCPI Cloud Home" class="logo" href="index.html">
+     RCCPI LLC HOME
+    </a>
+    <nav aria-label="Primary" class="nav">
+     <a href="services.html">
+      Services
+     </a>
+     <a href="pricing.html">
+      Pricing
+     </a>
+     <a href="email.html">
+      Email
+     </a>
+     <a aria-current="page" href="about.html">
+      About
+     </a>
+     <a class="btn ghost" href="contact.html#booking">
+      Book
+     </a>
+    </nav>
+   </div>
+  </header>
+  <main class="site-main">
+   <section class="section">
+    <div class="container">
+     <h1>
+      About RCCPI
+     </h1>
+     <p>
+      RCCPI is a Raleigh, NC Cloud Consulting Company focused on practical AWS solutions. We value clarity, documentation, and leaving your team stronger than we found it.
+     </p>
+     <p>
+      Founder:
+      <strong>
+       Michael Roussin
+      </strong>
+      — hands‑on builder focused on reliability, security, and cost discipline.
+     </p>
+    </div>
+   </section>
+  </main>
+  <footer class="site-footer">
+   <div class="container footer-grid">
+    <div>
+     <div class="logo">
+      RCCPI Cloud
+     </div>
+     <p>
+      Raleigh, NC
+      <br/>
+      <a href="mailto:info@rccpi.net">
+       info@rccpi.net
+      </a>
+     </p>
+    </div>
+    <nav aria-label="Footer" class="footer-nav">
+     <a href="services.html">
+      Services
+     </a>
+     <a href="pricing.html">
+      Pricing
+     </a>
+     <a href="email.html">
+      Email
+     </a>
+     <a href="about.html">
+      About
+     </a>
+     <a href="contact.html">
+      Contact
+     </a>
+     <a href="privacy.html">
+      Privacy
+     </a>
+    </nav>
+    <div class="foot-legal">
+     <p>
+      © RCCPI LLC • All rights reserved.
+     </p>
+    </div>
+   </div>
+  </footer>
+ </body>
+</html>

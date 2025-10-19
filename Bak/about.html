@@ -1,16 +1,14 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>About • RCCPI — Rooster Cloud Computing Pi</title>
-  <meta name="description" content="Learn about RCCPI (Rooster Cloud Computing Pi): our mission, what we do, and how we help small businesses with cloud and IT." />
+<head><base href="/"/><link href="/style.css" rel="stylesheet"/>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>About • RCCPI — Rooster Cloud Computing Pi</title>
+<meta content="Learn about RCCPI (Rooster Cloud Computing Pi): our mission, what we do, and how we help small businesses with cloud and IT." name="description"/>
+<!-- Sitewide stylesheet -->
 
-  <!-- Sitewide stylesheet -->
-  <link rel="stylesheet" href="/style.css" />
-
-  <!-- Optional: Organization structured data -->
-  <script type="application/ld+json">
+<!-- Optional: Organization structured data -->
+<script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Organization",
@@ -27,111 +25,101 @@
   }
   </script>
 </head>
-
 <body>
-  <!-- Header / Top Nav -->
-  <header class="site-header">
-    <div class="container">
-      <a class="brand" href="/index.html" aria-label="RCCPI home">
-        <span class="brand-mark" aria-hidden="true">🐓</span>
-        <span class="brand-text">RCCPI</span>
-      </a>
-      <nav class="site-nav" aria-label="Primary">
-        <ul>
-          <li><a href="/index.html">Home</a></li>
-          <li><a href="/services.html">Services</a></li>
-          <li><a href="/faqs/">FAQs</a></li>
-          <li><a href="/contact.html">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <!-- Optional hero (remove if you don't want an image here) -->
-  <section class="hero hero--about">
-    <div class="container">
-      <figure class="hero-media">
-        <img src="/Images/hero.webp" alt="RCCPI cloud infrastructure and consulting" loading="eager" decoding="async" />
-      </figure>
-      <div class="hero-content">
-        <h1>About RCCPI</h1>
-        <p class="lede">We help small businesses get enterprise‑grade reliability, security, and performance—without the enterprise price tag.</p>
-      </div>
-    </div>
-  </section>
-
-  <main id="main" class="container flow">
-    <!-- Mission -->
-    <section id="mission">
-      <h2>Our Mission</h2>
-      <p>RCCPI (Rooster Cloud Computing Pi) exists to make modern cloud and IT simple, affordable, and trustworthy for local businesses in and around Raleigh, North Carolina. We design, deploy, and manage solutions that keep your websites and apps fast, secure, and always‑on.</p>
-    </section>
-
-    <!-- What we do -->
-    <section id="what-we-do">
-      <h2>What We Do</h2>
-      <ul>
-        <li><strong>Cloud Consulting &amp; Migrations:</strong> Move from on‑prem or shared hosting to resilient cloud architectures.</li>
-        <li><strong>Containers &amp; VMs:</strong> Kubernetes and Docker for apps; KVM/OpenStack for virtual machines when you need them.</li>
-        <li><strong>Web Hosting &amp; Reverse Proxy:</strong> Nginx‑powered, SSL by default, tuned for speed and uptime.</li>
-        <li><strong>Security &amp; Compliance:</strong> MFA, encryption, access keys, backups, and monitoring—built in.</li>
-        <li><strong>Support &amp; Training:</strong> Practical guidance so your team can own as much (or as little) as you want.</li>
-      </ul>
-      <p class="note">Need something specific? <a href="/contact.html">Tell us what you’re building</a> and we’ll recommend a right‑sized approach.</p>
-    </section>
-
-    <!-- How we work -->
-    <section id="how-we-work">
-      <h2>How We Work</h2>
-      <ol>
-        <li><strong>Listen:</strong> Understand your goals, constraints, and timeline.</li>
-        <li><strong>Plan:</strong> Map an architecture with clear costs and trade‑offs.</li>
-        <li><strong>Build:</strong> Implement with infrastructure‑as‑code where practical.</li>
-        <li><strong>Harden:</strong> TLS, auth, backups, observability, and WAF/DDoS options.</li>
-        <li><strong>Support:</strong> Document, train, and monitor—no black boxes.</li>
-      </ol>
-    </section>
-
-    <!-- Values -->
-    <section id="values">
-      <h2>Our Values</h2>
-      <ul>
-        <li><strong>Clarity:</strong> Plain‑English explanations. No mystery fees.</li>
-        <li><strong>Reliability:</strong> Redundancy and backups are table stakes.</li>
-        <li><strong>Security:</strong> Least‑privilege access and encrypted by default.</li>
-        <li><strong>Performance:</strong> Fast sites convert. We optimize from day one.</li>
-        <li><strong>Local First:</strong> Proudly based in Raleigh, NC—available for on‑site support.</li>
-      </ul>
-    </section>
-
-    <!-- Credentials / Training (edit as needed) -->
-    <section id="credentials">
-      <h2>Credentials &amp; Training</h2>
-      <p>We’re lifelong tinkerers and professionals investing in industry certifications (CompTIA, Linux+, Network+, Security+), and hands‑on experience with Ubuntu, Kubernetes, Docker, KVM, and cloud platforms.</p>
-    </section>
-
-    <!-- CTA -->
-    <section id="cta" class="cta">
-      <h2>Let’s build something dependable</h2>
-      <p>Whether you need a simple, secure website or a production‑ready app platform, we can help you launch and scale confidently.</p>
-      <p><a class="button" href="/contact.html">Get a free consult</a></p>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container">
-      <nav aria-label="Footer">
-        <ul>
-          <li><a href="/index.html">Home</a></li>
-          <li><a href="/services.html">Services</a></li>
-          <li><a href="/faqs/">FAQs</a></li>
-          <li><a href="/contact.html">Contact</a></li>
-        </ul>
-      </nav>
-      <p>© <span id="year"></span> RCCPI LLC • Raleigh, NC</p>
-    </div>
-  </footer>
-
-  <script>
+<!-- Header / Top Nav -->
+<header class="site-header">
+<div class="container">
+<a aria-label="RCCPI home" class="brand" href="/index.html">
+<span aria-hidden="true" class="brand-mark">🐓</span>
+<span class="brand-text">RCCPI</span>
+</a>
+<nav aria-label="Primary" class="site-nav">
+<ul>
+<li><a href="/index.html">Home</a></li>
+<li><a href="/services.html">Services</a></li>
+<li><a href="/faqs/">FAQs</a></li>
+<li><a href="/contact.html">Contact</a></li>
+</ul>
+</nav>
+</div>
+</header>
+<!-- Optional hero (remove if you don't want an image here) -->
+<section class="hero hero--about">
+<div class="container">
+<figure class="hero-media">
+<img alt="RCCPI cloud infrastructure and consulting" decoding="async" loading="eager" src="/Images/hero.webp"/>
+</figure>
+<div class="hero-content">
+<h1>About RCCPI</h1>
+<p class="lede">We help small businesses get enterprise‑grade reliability, security, and performance—without the enterprise price tag.</p>
+</div>
+</div>
+</section>
+<main class="container flow" id="main">
+<!-- Mission -->
+<section id="mission">
+<h2>Our Mission</h2>
+<p>RCCPI (Rooster Cloud Computing Pi) exists to make modern cloud and IT simple, affordable, and trustworthy for local businesses in and around Raleigh, North Carolina. We design, deploy, and manage solutions that keep your websites and apps fast, secure, and always‑on.</p>
+</section>
+<!-- What we do -->
+<section id="what-we-do">
+<h2>What We Do</h2>
+<ul>
+<li><strong>Cloud Consulting &amp; Migrations:</strong> Move from on‑prem or shared hosting to resilient cloud architectures.</li>
+<li><strong>Containers &amp; VMs:</strong> Kubernetes and Docker for apps; KVM/OpenStack for virtual machines when you need them.</li>
+<li><strong>Web Hosting &amp; Reverse Proxy:</strong> Nginx‑powered, SSL by default, tuned for speed and uptime.</li>
+<li><strong>Security &amp; Compliance:</strong> MFA, encryption, access keys, backups, and monitoring—built in.</li>
+<li><strong>Support &amp; Training:</strong> Practical guidance so your team can own as much (or as little) as you want.</li>
+</ul>
+<p class="note">Need something specific? <a href="/contact.html">Tell us what you’re building</a> and we’ll recommend a right‑sized approach.</p>
+</section>
+<!-- How we work -->
+<section id="how-we-work">
+<h2>How We Work</h2>
+<ol>
+<li><strong>Listen:</strong> Understand your goals, constraints, and timeline.</li>
+<li><strong>Plan:</strong> Map an architecture with clear costs and trade‑offs.</li>
+<li><strong>Build:</strong> Implement with infrastructure‑as‑code where practical.</li>
+<li><strong>Harden:</strong> TLS, auth, backups, observability, and WAF/DDoS options.</li>
+<li><strong>Support:</strong> Document, train, and monitor—no black boxes.</li>
+</ol>
+</section>
+<!-- Values -->
+<section id="values">
+<h2>Our Values</h2>
+<ul>
+<li><strong>Clarity:</strong> Plain‑English explanations. No mystery fees.</li>
+<li><strong>Reliability:</strong> Redundancy and backups are table stakes.</li>
+<li><strong>Security:</strong> Least‑privilege access and encrypted by default.</li>
+<li><strong>Performance:</strong> Fast sites convert. We optimize from day one.</li>
+<li><strong>Local First:</strong> Proudly based in Raleigh, NC—available for on‑site support.</li>
+</ul>
+</section>
+<!-- Credentials / Training (edit as needed) -->
+<section id="credentials">
+<h2>Credentials &amp; Training</h2>
+<p>We’re lifelong tinkerers and professionals investing in industry certifications (CompTIA, Linux+, Network+, Security+), and hands‑on experience with Ubuntu, Kubernetes, Docker, KVM, and cloud platforms.</p>
+</section>
+<!-- CTA -->
+<section class="cta" id="cta">
+<h2>Let’s build something dependable</h2>
+<p>Whether you need a simple, secure website or a production‑ready app platform, we can help you launch and scale confidently.</p>
+<p><a class="button" href="/contact.html">Get a free consult</a></p>
+</section>
+</main>
+<footer class="site-footer">
+<div class="container">
+<nav aria-label="Footer">
+<ul>
+<li><a href="/index.html">Home</a></li>
+<li><a href="/services.html">Services</a></li>
+<li><a href="/faqs/">FAQs</a></li>
+<li><a href="/contact.html">Contact</a></li>
+</ul>
+</nav>
+<p>© <span id="year"></span> RCCPI LLC • Raleigh, NC</p>
+</div>
+</footer>
+<script>
     // Small enhancement: keep copyright year current
-    document.getElementById('year').textContent = new Date().getFul
+    document.getElementById('year').textContent = new Date().getFul</script></body></html>
